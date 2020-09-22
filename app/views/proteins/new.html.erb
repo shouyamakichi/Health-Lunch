@@ -1,0 +1,121 @@
+
+
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%# <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %> 
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">商品の情報を入力</h2>
+    <%= form_with model: @protein, url: proteins_path, local: true do |f| %>
+
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+    <%# <%= render 'shared/error_messages', model: f.object %>  
+    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        出品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+        <%# <%= image_tag @item.image, class: 'img-upload' if @item.image.attached? %> 
+      </div>
+    </div>
+    <%# /出品画像 %>
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        商品名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          商品の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :acount, class:"items-text", id:"item-info" %>
+      </div>
+    </div>
+    <%# /商品名と商品説明 %>
+
+    <%# 販売価格 %>
+    <div class="sell-price">
+      <div class="weight-bold-text question-text">
+        <span>販売価格</span>
+        <a class="question" href="#">?</a>
+      </div>
+      <div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>価格</span>
+            <span class="indispensable">必須</span>
+          </div>
+          <span class="sell-yen">¥</span>
+          <%= f.text_field :price, class:"price-input", id:"item-price" %>
+        </div>
+        <div class="price-content">
+          <span>配送料</span>
+          <span>
+            <span id='add-tax-price'></span>円
+          </span>
+        </div>
+        <div class="price-content">
+          <span>販売価格(税込み)</span>
+          <span>
+            <span id='profit'></span>円
+        </div>
+        </span>
+      </div>
+    </div>
+    <%# /販売価格 %>
+     <div class="price-content">
+          <div class="price-text">
+            <span>エネルギー</span>
+          </div>
+          <%= f.text_field :energy, class:"price-input" %>
+      </div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>たんぱく質</span>
+          </div>
+          <%= f.text_field :prote, class:"price-input" %>
+        </div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>脂質</span>
+          </div>
+          <%= f.text_field :Lipid, class:"price-input" %>
+        </div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>塩分</span>
+          </div>
+          <%= f.text_field :salt, class:"price-input" %>
+        </div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>炭水化物</span>
+          </div>
+          <%= f.text_field :carbo, class:"price-input" %>
+        </div>
+    <div class="sell-btn-contents">
+      <%= f.submit "たんぱくケア" ,class:"sell-btn" %>
+    </div>
+    <div class="sell-btn-contents">
+      <%= f.submit "カロリーケア" ,class:"sell-btn" %> 
+    </div>
+    <div class="sell-btn-contents">
+      <%= f.submit "やわらかメニュー" ,class:"sell-btn"%> 
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <% end %>
+  </div>
+  
+<div>
