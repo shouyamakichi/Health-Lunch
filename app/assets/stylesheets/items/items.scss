@@ -1,0 +1,120 @@
+.main{
+  background-color: #FFE4B5;
+}
+// Topの画像編集
+.title-contents{
+  width :100vw;
+  background-image: image-url('bento11.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.advertising{
+  font-size: 50px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.picture-contents{
+  margin: 0 auto;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+// Topの画像編集
+
+// 選択メニュー
+.select-reason-contents{
+  padding: 50px;
+}
+
+.title{
+  text-align: center;
+  font-size: 40px;
+}
+
+.bento-lists{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.list{
+  width: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.list-pict {
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.bento-list-text{
+  font-size: 30px;
+  position: absolute;
+}
+
+.bento-list-title{
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 50px;
+}
+
+.bento-list-explain{
+  font-size: 18px;
+  margin-bottom: 70px;
+}
+// 選択メニュー
+
+// 選ばれる理由
+.feature-contents{
+  background-image: image-url('bento12.jpg');
+  width: 100vw;
+  height: 80vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #FF4F02;
+}
+
+.second-title{
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.textArea{
+  margin-bottom: 80px;
+}
+
+.discBox{
+  margin-bottom: 40px;
+}
+
+.menu{
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.acount{
+  font-size: 20px;
+  margin-bottom: 80px;
+}
+
+
+

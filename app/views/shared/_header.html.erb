@@ -1,0 +1,20 @@
+<header class='top-page-header'>
+  <div class='search-bar-contents'>
+    <%= link_to 'HealthLunch', root_path, method: :get, class: "healthLunch"%>
+  </div>
+  <div class='nav'>
+    <ul class='lists-left'>
+     <li><%=link_to 'ご利用ガイド', '#', class: "guide" %><li>
+     <li><%=link_to 'よくある質問', '#', class: "question" %></li>
+    </ul>
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+        <li><%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout"%></li>
+      <% else %>
+        <li><%=link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%=link_to '新規登録', new_user_registration_path, class: "sign_up"%></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+
