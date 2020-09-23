@@ -1,0 +1,69 @@
+<%= render "shared/header" %>
+
+<div class='menu-main'>
+  <div class='menu-contents'>
+    <div class='top-contents'>
+      <div class='top-image'>
+        <%= image_tag @protein.image ,class:'image-top'%>
+      </div>
+      <div class='top-right'>
+        <div class='bento-name'>
+          <span><%= @protein.name %></span>
+        </div>
+        <div class='bento-price'>
+          <span><%= @protein.price%>円</span>
+        </div>
+      </div>
+    </div>
+    <div class='center-contents'>
+      <div class='center-left'>
+        <h1 class='menus'>
+          メニュー
+        </h1>
+        <ul class='menu'>
+          <li class= 'food'>豚肉の生姜焼き</li>
+          <li class= 'food'>ポトフ</li>
+          <li class= 'food'>ほうれん草の卵とじ</li>
+          <li class= 'food'>南瓜のクリーム煮</li>
+        </ul>
+      </div>
+      <div class='center-right'>
+      <% if user_signed_in? %>
+        <% if current_user == @user || current_user.admin? %>
+          <div class='btn-blue'>
+            <%= link_to '商品の編集', edit_protein_path, method: :get,class: 'item-blue-btn'%>
+          </div>
+          <div class='btn-red'>
+            <%= link_to '削除', root_path, method: :delete, class: 'item-red-btn'%>
+          </div>
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+      <table>
+          <tr>
+            <th>エネルギー</th>
+            <td><%= @protein.energy%></td>
+          </tr>
+          <tr>
+            <th>たんぱく</th>
+            <td><%= @protein.prote %></td>
+          </tr>
+          <tr>
+            <th>脂質</th>
+            <td><%= @protein.Lipid %></td>
+          </tr>
+          <tr>
+            <th>塩分</th>
+            <td><%= @protein.salt %></td>
+          </tr>
+          <tr>
+            <th>炭水化物</th>
+            <td><%= @protein.carbo %></td>
+          </tr>
+      </table>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
+
