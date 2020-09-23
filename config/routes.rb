@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
   root to: 'items#index'
   resources :items
-  resources :proteins, only: [:index, :new, :create, :show]
+  resources :proteins
   resources :calories, only: [:index, :new, :create]
   resources :softs, only: :index
 end

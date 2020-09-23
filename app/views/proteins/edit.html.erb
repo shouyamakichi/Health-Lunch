@@ -2,18 +2,10 @@
 
 <div class="items-sell-contents">
   <header class="items-sell-header">
-    <%# <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %> 
-
   </header>
   <div class="items-sell-main">
-    <h2 class="items-sell-title">商品の編集</h2>
-    <%= form_with model: @protein, url: proteins_path, local: true do |f| %>
-
-    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    <%# <%= render 'shared/error_messages', model: f.object %>  
-    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-
-    <%# 出品画像 %>
+    <h2 class="items-sell-title">商品の情報を入力</h2>
+    <%= form_with model: @protein, local: true do |f| %>
     <div class="img-upload">
       <div class="weight-bold-text">
         出品画像
@@ -23,12 +15,9 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"item-image" %>
-        <%# <%= image_tag @item.image, class: 'img-upload' if @item.image.attached? %> 
+        <%= f.file_field :image, id:"item-image" %> 
       </div>
     </div>
-    <%# /出品画像 %>
-    <%# 商品名と商品説明 %>
     <div class="new-items">
       <div class="weight-bold-text">
         商品名
@@ -43,9 +32,6 @@
         <%= f.text_area :acount, class:"items-text", id:"item-info" %>
       </div>
     </div>
-    <%# /商品名と商品説明 %>
-
-    <%# 販売価格 %>
     <div class="sell-price">
       <div class="weight-bold-text question-text">
         <span>販売価格</span>
@@ -74,7 +60,6 @@
         </span>
       </div>
     </div>
-    <%# /販売価格 %>
      <div class="price-content">
           <div class="price-text">
             <span>エネルギー</span>
@@ -105,13 +90,42 @@
           </div>
           <%= f.text_field :carbo, class:"price-input" %>
         </div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>メニュー</span>
+          </div>
+          <%= f.text_field :first, class:"price-input" %>
+        </div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>メニュー</span>
+          </div>
+          <%= f.text_field :second, class:"price-input" %>
+        </div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>メニュー</span>
+          </div>
+          <%= f.text_field :third, class:"price-input" %>
+        </div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>メニュー</span>
+          </div>
+          <%= f.text_field :forth, class:"price-input" %>
+        </div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>メニュー</span>
+          </div>
+          <%= f.text_field :fifth, class:"price-input" %>
+        </div>
     <div class="sell-btn-contents">
       <%= f.submit "たんぱくケア" ,class:"sell-btn" %>
     </div>
     <div class="sell-btn-contents"> 
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <%=link_to 'もどる', protein_path, class:"back-btn" %>
     </div>
     <% end %>
   </div>
-  
 <div>

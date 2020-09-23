@@ -1,3 +1,4 @@
 class Protein < ApplicationRecord
-  has_one :item
+  has_one_attached :image
+  has_many :users
 end
