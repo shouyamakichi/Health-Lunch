@@ -2,7 +2,8 @@
 
 <div class='buyer-contents'>
 <%= image_tag @protein.image, class: 'buy-item-img' %>
-<%= form_with id:'card-form', model: @protein, url: protein_buyers_path(@protein.id), class: 'transaction-form-wrap', local: true do |f| %>
+<%= form_with id:'card-form', model: @buyer, url: protein_buyers_path(@protein.id), class: 'transaction-form-wrap', local: true do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
   <h2 class='buyer-header'>
     <span class='block-header'>購入者情報入力</span>
   </h2>
@@ -50,6 +51,7 @@
   </div>
   
     <div class='seq'>
+      <span class='block-header'>カード情報</span>
       <div class='card-number'>
       <%= f.text_field :number, class:"input-default",id:"card-number", placeholder:"カード番号",maxlength:"16" %>
       </div>  
