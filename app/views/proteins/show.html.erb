@@ -1,0 +1,70 @@
+<%= render "shared/header" %>
+
+<div class='menu-main'>
+  <div class='menu-contents'>
+    <div class='top-contents'>
+      <div class='top-image'>
+        <%= image_tag @protein.image, class:'image-top'%>
+      </div>
+      <div class='top-right'>
+        <div class='bento-name'>
+          <span><%= @protein.name %></span>
+        </div>
+        <div class='bento-price'>
+          <span><%= @protein.price%>円(税抜）</span>
+        </div>
+      </div>
+    </div>
+    <div class='center-contents'>
+      <div class='center-left'>
+        <h1 class='menus'>
+          メニュー
+        </h1>
+        <ul class='menu'>
+          <li class= 'food'><%= @protein.first %></li>
+          <li class= 'food'><%= @protein.second %></li>
+          <li class= 'food'><%= @protein.third %></li>
+          <li class= 'food'><%= @protein.forth %></li>
+          <li class= 'food'><%= @protein.fifth %></li>
+        </ul>
+      </div>
+      <div class='center-right'>
+      <% if user_signed_in? %>
+        <% if current_user == @user || current_user.admin? %>
+          <div class='btn-blue'>
+            <%= link_to '商品の編集', edit_protein_path, method: :get,class: 'item-blue-btn'%>
+          </div>
+          <div class='btn-red'>
+            <%= link_to '削除', protein_path, method: :delete, class: 'item-red-btn'%>
+          </div>
+        <% else %>
+          <div class='btn-green'>
+            <%= link_to '購入', protein_buyers_path(@protein), class: 'item-green-btn'%>
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+      <table>
+          <tr>
+            <th>エネルギー</th>
+            <td><%= @protein.energy%></td>
+          </tr>
+          <tr>
+            <th>たんぱく</th>
+            <td><%= @protein.prote %></td>
+          </tr>
+          <tr>
+            <th>脂質</th>
+            <td><%= @protein.Lipid %></td>
+          </tr>
+          <tr>
+            <th>塩分</th>
+            <td><%= @protein.salt %></td>
+          </tr>
+          <tr>
+            <th>炭水化物</th>
+            <td><%= @protein.carbo %></td>
+          </tr>
+      </table>
+  </div>
+<%= render "shared/footer" %>

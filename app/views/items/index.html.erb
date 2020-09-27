@@ -18,7 +18,7 @@
     </div>
     <ul class='bento-lists'>
       <li class='list'>
-        <%= link_to(proteins_path) do%>
+        <%= link_to(proteins_path) do %>
           <%= image_tag "bento7.jpg", class: "list-pict" %> 
         <% end %>
         <h3 class='bento-list-text'>
@@ -83,5 +83,26 @@
         </div>
       </div>
     </div>
+    <div class='comment'>
+  <h1 class= 'comment-title'>口コミする</h1>
+  <div class="card-content">
+    <div class='average-score'>
+      <div class='star-rating mb-2'>
+        <div class='star-rating-front' style="width: %">☆☆☆☆☆</div>
+        <div class='star-rating-back'>☆☆☆☆☆</div>
+      </div>
+      <div class='average-score-display ml-3 pt-2'>
+      </div>
+    </div>
+  </div>
+    <form>
+      <textarea class='comment-text'></textarea>
+      <button type="submit" class="comment-btn">
+        <%= image_tag "phone-icon.jpg", class:"comment-flag-icon", width:"20", height: "25" %>
+      <span>レビュー</span>
+      </button>
+    </form>
+  </div>
+</div>
 </div>
 <%= render "shared/footer" %>
