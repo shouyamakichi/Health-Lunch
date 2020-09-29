@@ -5,10 +5,6 @@ Rails.application.routes.draw do
     resources :user_sessions, only: :new 
   end
   root to: 'items#index'
-  resources :items do
-
-  resources :items
-  resources :proteins, only: [:index, :new, :create, :show]
 
   resources :items, only: [:index, :show] do
     resources :reviews, only: [:index, :create]
