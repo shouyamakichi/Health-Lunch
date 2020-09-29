@@ -87,9 +87,15 @@ ActiveRecord::Schema.define(version: 2020_09_27_041648) do
     t.string "salt", null: false
     t.string "Lipid", null: false
     t.string "carbo", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+<<<<<<< Updated upstream
     t.integer "user_id", null: false
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
     t.string "first", null: false
     t.string "second", null: false
     t.string "third", null: false
@@ -106,6 +112,10 @@ ActiveRecord::Schema.define(version: 2020_09_27_041648) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["item_id"], name: "index_reviews_on_item_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
