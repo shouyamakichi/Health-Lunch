@@ -1,17 +1,16 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-<<<<<<< Updated upstream
+
   has_many :items
   has_many :protein
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :reviews
-=======
-<<<<<<< Updated upstream
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-=======
+
   has_many :items
   has_many :proteins
 
@@ -23,8 +22,7 @@ class User < ApplicationRecord
       validates :last_name
       validates :first_name
     end
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
 
     with_options presence: true, format: {with: /\A[ぁ-んァ-ン一-龥]/} do
       validates :last_name

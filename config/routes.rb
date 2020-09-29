@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :items, only: [:index, :show] do
     resources :reviews, only: [:index, :create]
   end
+  
   resources :proteins do
     resources :buyers, only: [:index, :create]
   end

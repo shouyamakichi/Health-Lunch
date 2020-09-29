@@ -1,13 +1,9 @@
 class Item < ApplicationRecord
   has_many :reviews, dependent: :destroy
   belongs_to :user
-<<<<<<< Updated upstream
   has_one_attached :image
-<<<<<<< Updated upstream
-  has_many :reviews
-=======
   belongs_to :protein
-=======
+
   belongs_to :protein
 
 
@@ -26,6 +22,4 @@ class Item < ApplicationRecord
       0.0
     end
   end
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 end
