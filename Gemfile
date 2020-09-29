@@ -55,4 +55,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails'
 gem 'devise'
 gem 'mini_magick'
+<<<<<<< Updated upstream
 gem 'image_processing', '~> 1.2'
+=======
+gem 'image_processing', '~> 1.2'
+gem 'rails-i18n'
+gem 'payjp'
+gem 'jquery-rails'
+gem 'ratyrate'
+gem 'bulma-rails'
+gem 'font-awesome-rails'
+>>>>>>> Stashed changes
