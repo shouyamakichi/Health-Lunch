@@ -1,18 +1,5 @@
 class ProteinsController < ApplicationController
-<<<<<<< Updated upstream
-  # ログインしていないユーザーはindex,show以外URL直接打ち込んでもトップ画面へ戻る
-  before_action :authenticate_user!, except: [:index, :show]
-  # ログインしていないユーザーはindex,show以外URL直接打ち込んでもトップ画面へ戻る
 
-  #管理者のみnew,editへの遷移可能
-  before_action :move_to_new, only: [:new, :edit]
-  #管理者のみnew,editへの遷移可能
-
-  before_action :item_set,  only: [:show, :edit, :update, :destroy]
-
-=======
-<<<<<<< Updated upstream
-=======
   # ログインしていないユーザーはindex,show以外URL直接打ち込んでもトップ画面へ戻る
   before_action :authenticate_user!, except: [:index, :show]
   # ログインしていないユーザーはindex,show以外URL直接打ち込んでもトップ画面へ戻る
@@ -21,9 +8,6 @@ class ProteinsController < ApplicationController
   #管理者のみnew,editへの遷移可能
   before_action :item_set,  only: [:show, :edit, :update, :destroy]
 
-
->>>>>>> Stashed changes
->>>>>>> Stashed changes
   def index
     @proteins = Protein.all
   end
