@@ -9,6 +9,8 @@ class CreateProteins < ActiveRecord::Migration[6.0]
       t.string :salt,     null: false
       t.string :Lipid,     null: false
       t.string :carbo,     null: false
+      t.integer :user_id,           null:false, foreign_key: true
+      
       t.timestamps
     end
   end

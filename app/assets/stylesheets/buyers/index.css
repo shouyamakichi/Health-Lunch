@@ -1,0 +1,148 @@
+/* 
+
+.buyer-contents{
+  width: 100vw;
+  height: 100vh;
+}
+
+.buyer-header{
+  margin: 0 10%;
+  margin-top: 50px;
+}
+
+.block-header{
+  font-size: 30px;
+}
+
+.buyer-body{
+  margin: 0 10%;
+}
+
+.zip-block{
+  margin-top: 50px;
+  display: flex;
+  border: 1px solid black;
+}
+
+.form-label{
+  font-size: 20px;
+  padding: 30px 50px;
+  background-color: #FDF5E6;
+}
+
+.zip{
+
+}
+
+.constrint{
+  padding: 30px 50px;
+  background-color: #FDF5E6;
+}
+
+.required{
+  font-size: 16px;
+  background-color: red;
+}
+
+.zip-control{
+  padding: 30px 50px;
+  background-color: white;
+}
+
+.zip-form{
+
+}
+
+.transaction-form-wrap{
+  
+}
+
+.credit-card-form{
+  width: 50%;
+  margin-top: 50px;
+  margin-left: 350px;
+  padding-bottom: 30px;
+  border: 1px solid black;
+  margin-bottom: 50px;
+}
+
+.info-input-headline{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.form-text-wrap{
+  text-align: center;
+  width: 30%;
+}
+
+.seq{
+  width: 100%;
+}
+
+.card-number{
+  width: 50%;
+  margin-left:160px;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.card{
+  background: #ea352d;
+    margin-left: 8px;
+    padding: 3px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.input-expiration-date-wrap{
+  text-align: center;
+  display: flex;
+  margin-left: 120px;
+}
+
+.input-expiration-date{
+  width: 20%;
+    margin-top: 5px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    resize: none;
+    line-height: 45px;
+    text-align: center;
+}
+
+.card{
+  
+}
+
+.form-text{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buy-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+
+buy-red-btn {
+  width: 100%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+} */

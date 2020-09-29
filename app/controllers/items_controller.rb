@@ -1,6 +1,11 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
   def index
+<<<<<<< Updated upstream
+    @item = Item.all
+=======
     @items = Item.all
+<<<<<<< Updated upstream
   end
 
   def new
@@ -14,17 +19,27 @@ class ItemsController < ApplicationController
     else
       render :new
     end
+>>>>>>> Stashed changes
   end
 
   def show
-    
-  end
-
+    @item = Item.find(params[:id])
+    @reviews = Reviews.new
+  end 
 
 
   private
 
   def items_params
-    params.require(:item).permit( :image,:name, :acount, :price,:energy, :prote, :salt, :Lipid, :carbo).merge(user_id: current_user.id)
+    params.require(:item).permit(:name).merge(user_id: current_user.id)
   end
+=======
+  end
+
+  def show
+    @item = Item.find(params[:id])
+    @review = Review.new
+  end 
+
+>>>>>>> Stashed changes
 end

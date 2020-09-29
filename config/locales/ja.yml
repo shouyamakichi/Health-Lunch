@@ -1,0 +1,29 @@
+ja:
+  activerecord:
+    attributes:
+      protein:
+        protein: たんぱく
+        image: 写真
+        name: 商品名
+        price: 金額
+        energy: エネルギー
+        prote: たんぱく質
+        salt: 塩分
+        Lipid: 脂質
+        carbo: 炭水化物
+        first: メニュー1
+        second: メニュー2
+        third: メニュー3
+        forth: メニュー4
+
+  activerecord:
+    attributes:
+      user:
+        email: メールアドレス
+        password: パスワード
+        last_name: 名字
+        first_name: 名前
+        last_name_kana: 名字フリガナ
+        first_name_kana: 名前フリガナ
+      
+

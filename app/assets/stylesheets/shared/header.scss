@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header{
+  width: 100vw;
+  background-color: wheat;
+ 
+}
+
+.search-bar-contents{
+ display: flex;
+ justify-content: center;
+}
+
+.healthLunch {
+  font-size: 50px;
+  text-shadow: 1px 2px 3px #808080;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.lists-left {
+  display: flex;
+}
+
+.guide {
+  margin-right: 50px;
+}
+
+.question {
+  
+}
+
+.lists-right {
+  display: flex;
+}
+
+.logout {
+ 
+}
+
+.login {
+  
+}
+
+.sign_up{
+ margin-left: 40px;
+}
+
+.head_tel{
+  
+}
+
+.head_num{
+ 
+}
+
+.head_time{
+  
+}

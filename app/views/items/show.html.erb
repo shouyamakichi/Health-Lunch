@@ -1,47 +1,27 @@
-<%= render "shared/header" %>
-
-<div class='main-contents'>
-  <div class='main-pic'>
-    <%= image_tag "sumaho.jpg", class: "item-contents"%>
-  </div>
-  <div class='category-item'>
-    <h2 class='title'>たんぱくケアメニュー<h2>
-  </div>
-  <div class='menu-categoy'>
-    <ul class='item-menu'>
-      <li class='menu'>
-       <%= image_tag "bento4.jpg", class: "bento-contents"%>
-        <div class="item-info">
-          <h3 class='item-name'>
-            弁当名
-          <h3>
-          <div class='item-price'>
-            <span class='price'>500円</span>
+<section class='section mt-6'>
+  <div class='review-container'>
+    <div class='columns is-centered'>
+      <div class='column is-5'>
+          <div class='card mb-6'>
+            <header class='card-header'>
+              <p class='card-heder-title'>
+                <%= @item.name %>
+              </p>
+            </header>
+            <div class="card-content">
+              <div class='content average-score'>
+                <div class='star-rating mb-2'>
+                  <div class='star-rating-front' style='width:<%= @item.review_score_percentage %>%'>★★★★★</div>
+                  <div class='star-rating-back'>★★★★★</div>
+                </div>
+                <div class ='average-score-display ml-3 pt-2'>
+                  <%= @item.avg_score %>点(<%= @item.reviews.count %>件のレビュー)
+                </div>
+              </div>
+            </div>
           </div>
-        </div> 
-      </li>
-      <li class='menu'>
-        <%= image_tag "bento4.jpg", class: "bento-contents" %>
-          <div class="item-info">
-          <h3 class='item-name'>
-            弁当名
-          <h3>
-          <div class='item-price'>
-            <span class='price'>500円</span>
-          </div>
-        </div> 
-      </li>
-      <li class='menu'>
-       <%= image_tag "bento4.jpg", class: "bento-contents" %>
-        <div class="item-info">
-          <h3 class='item-name'>
-            弁当名
-          <h3>
-          <div class='item-price'>
-            <span class='price'>500円</span>
-          </div>
-        </div> 
-      </li>
-    </ul>
+        <%= render 'reviews/form', review: @review, item: @item %>
+      </div>
+    </div>
   </div>
-</div>
+  </section>

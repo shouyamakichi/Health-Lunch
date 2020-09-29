@@ -9,40 +9,27 @@
   </div>
   <div class='menu-categoy'>
     <ul class='item-menu'>
+      <% @proteins.each do |protein| %>
       <li class='menu'>
-       <%= image_tag "bento4.jpg", class: "bento-contents"%>
-        <div class="item-info">
-          <h3 class='item-name'>
-            弁当名
-          <h3>
-          <div class='item-price'>
-            <span class='price'>500円</span>
-          </div>
-        </div> 
-      </li>
-      <li class='menu'>
-        <%= image_tag "bento4.jpg", class: "bento-contents" %>
+        <%= link_to protein_path(protein.id) do%>
+          <%= image_tag protein.image, class: 'bento-contents' if protein.image.attached? %>
           <div class="item-info">
-          <h3 class='item-name'>
-            弁当名
-          <h3>
-          <div class='item-price'>
-            <span class='price'>500円</span>
+            <h3 class='item-name'><%= protein.name %><h3>
+            <div class='item-price'>
+              <span class='price'><%= protein.price %></span>
+            </div>
           </div>
-        </div> 
+        <% end %>
       </li>
-      <li class='menu'>
-       <%= image_tag "bento4.jpg", class: "bento-contents" %>
-        <div class="item-info">
-          <h3 class='item-name'>
-            弁当名
-          <h3>
-          <div class='item-price'>
-            <span class='price'>500円</span>
-          </div>
-        </div> 
-      </li>
+      <% end %>
     </ul>
   </div>
+  <% if user_signed_in? %>
+    <% if current_user == @user || current_user.admin? %>
+      <div class='btn-blue'>
+        <%= link_to '商品の編集', new_protein_path, method: :get,class: 'item-blue-btn'%>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 <%= render "shared/footer" %>
