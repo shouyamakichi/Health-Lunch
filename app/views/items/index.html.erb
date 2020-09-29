@@ -83,6 +83,7 @@
         </div>
       </div>
     </div>
+<<<<<<< Updated upstream
     <div class='comment'>
   <h1 class= 'comment-title'>口コミする</h1>
   <div class="card-content">
@@ -104,5 +105,47 @@
     </form>
   </div>
 </div>
+=======
+<<<<<<< Updated upstream
+=======
+  <section class='section mt-6'>
+    <div class='review-container'>
+      <div class='columns is-centered'>
+        <div class='column is-5'>
+          <% @items.each do |item| %>
+            <div class="card mb-6">
+              <div class="card-header">
+                <p class="card-heder-title">
+                  <%= item.name %>
+                </p>
+              </div>
+              <div class="card-content">
+                <div calss="content">
+                  <div class="content average-score">
+                    <div class="star-rating mb-2">
+                      <div class="star-rating-front" style="width: <%= item.review_score_percentage %>%">★★★★★</div>
+                      <div class="star-rating-back">★★★★★</div>
+                    </div>
+                    <div class ="average-score-display ml-3 pt-2">
+                    <%= item.avg_score %>点(<%= item.reviews.count %>件のレビュー)
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <%= link_to item_reviews_path(item), class: "button card-footer-item" do %>
+                  レビューを見る
+                <% end %>
+                <%= link_to item_path(item), class: "button card-footer-item" do %>
+                  レビューを書く
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 </div>
-<%= render "shared/footer" %>

@@ -6,11 +6,17 @@ Rails.application.routes.draw do
   end
   root to: 'items#index'
   resources :items do
+
+  resources :items
+  resources :proteins, only: [:index, :new, :create, :show]
+
+  resources :items, only: [:index, :show] do
     resources :reviews, only: [:index, :create]
   end
   resources :proteins do
     resources :buyers, only: [:index, :create]
   end
+
   resources :calories, only: [:index, :new, :create]
   resources :softs, only: :index
 end
