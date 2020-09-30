@@ -1,35 +1,42 @@
 <%= render "shared/header" %>
 
 <div class='main-contents'>
-  <div class='main-pic'>
-    <%= image_tag "sumaho.jpg", class: "item-contents"%>
-  </div>
-  <div class='category-item'>
-    <h2 class='title'>たんぱくケアメニュー<h2>
-  </div>
-  <div class='menu-categoy'>
-    <ul class='item-menu'>
-      <% @proteins.each do |protein| %>
-      <li class='menu'>
-        <%= link_to protein_path(protein.id) do%>
-          <%= image_tag protein.image, class: 'bento-contents' if protein.image.attached? %>
-          <div class="item-info">
-            <h3 class='item-name'><%= protein.name %><h3>
-            <div class='item-price'>
-              <span class='price'><%= protein.price %></span>
-            </div>
-          </div>
-        <% end %>
-      </li>
-      <% end %>
-    </ul>
-  </div>
-  <% if user_signed_in? %>
-    <% if current_user == @user || current_user.admin? %>
-      <div class='btn-blue'>
-        <%= link_to '商品の編集', new_protein_path, method: :get,class: 'item-blue-btn'%>
+  <div class='bento-menu'>
+    <div class='main-pic'>
+      <div class='pic'>
+        <p = class='pic-contents'>1食あたりのたんぱく質量が13ｇ程度、塩分2.0ｇ、カリウム500ｍｇ、リン270mg以下に抑えた食事</p>
       </div>
+    </div>
+    <div class='main-menu'>
+      <div class='category-item'>
+        <h2 class='title'>たんぱくケアメニュー<h2>
+      </div>
+      <div class='menu-category'>
+        <ul class='category-menu'>
+          <% @proteins.each do |protein| %>
+          <li class='menu'>
+            <%= link_to protein_path(protein.id), class: 'link' do%>
+              <%= image_tag protein.image, class: 'bento-contents' if protein.image.attached? %>
+              <div class="item-info">
+                <h3 class='item-name'><%= protein.name %>弁当<h3>
+                <div class='item-price'>
+                  <span class='price'><%= protein.price %>円(税抜)</span>
+                </div>
+              </div>
+            <% end %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <% if user_signed_in? %>
+      <% if current_user == @user || current_user.admin? %>
+        <div class='btn-blue'>
+          <%= link_to '商品の編集', new_protein_path, method: :get,class: 'item-blue-btn'%>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 <%= render "shared/footer" %>
+</div>
+
