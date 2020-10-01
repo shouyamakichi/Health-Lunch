@@ -4,12 +4,10 @@ class Item < ApplicationRecord
   has_one_attached :image
   belongs_to :protein
 
-  belongs_to :protein
-
 
   def avg_score
     unless self.reviews.empty?
-      # reviews.average(:score).to_f
+      reviews.average(:score).round(1).to_f
     else
       0.0
     end
@@ -17,7 +15,7 @@ class Item < ApplicationRecord
 
   def review_score_percentage
     unless self.reviews.empty?
-      # reviews.average(:score).to_f*100/5
+      reviews.average(:score).to_f*100/5
     else
       0.0
     end
