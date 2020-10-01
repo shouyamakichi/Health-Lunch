@@ -2,10 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.section{
+  background-color: #FFFFEE;
+  width: 100vw;
+  height: 100vh;
+}
+
 .rating-box .rating .fa{
   font-size: 30px;
   color: #fc0;
   cursor: pointer;
+  background-color: #FFFFEE;
 }
 
 .main-rating{
@@ -23,3 +31,5 @@
 .fa{
   color: #fc0
 }
+
+
