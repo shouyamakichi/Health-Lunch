@@ -1,5 +1,5 @@
 .main{
-  background-color: #FFE4B5;
+  background-color: #FFFFEE;
 }
 // Topの画像編集
 .title-contents{
@@ -14,7 +14,7 @@
   justify-content: center;
   padding: 5vh 15vw;
   color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 2px 3px black;
 }
 
 .advertising{
@@ -79,27 +79,28 @@
 
 // 選ばれる理由
 .feature-contents{
-  background-image: image-url('bento12.jpg');
+  background-image: image-url('bnt13.jpg');
   width: 100vw;
   height: 80vh;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  background-position: center;
+  background-color:rgba(255,255,255,0.3);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding: 5vh 15vw;
-  color: #FF4F02;
+  color: white;
+  text-shadow: 1px 2px 3px black;
+  font-style: italic;
 }
 
-.second-title{
-  font-size: 50px;
-  margin-bottom: 40px;
+.second-health-title{
+  font-size: 40px;
 }
 
 .textArea{
-  margin-bottom: 80px;
 }
 
 .discBox{
@@ -108,13 +109,12 @@
 
 .menu{
   font-size: 35px;
-  margin-bottom: 20px;
 }
 
 .acount{
   font-size: 20px;
-  margin-bottom: 80px;
 }
+
 
 .star-rating{
   position: relative;

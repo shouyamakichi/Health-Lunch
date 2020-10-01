@@ -1,153 +1,140 @@
 
-
-.menu-main {
-  width: 100vw;
-  height: 100vw;
-  background-color: #FFC7AF;
+.show-menu{
+  background-color: #F8F8FF;
 }
 
-.menu-contents{
+.show-contents{
   width: 80%;
-}
-
-.top-contents{
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-}
-
-.top-image{
-  margin-top: 50px;
-}
-
-.image-top{
-  
-}
-
-.top-right{
-  font-size: 40px;
+  margin: 0 10%;
 }
 
 .bento-name{
-  border-bottom: 1px solid black;
-}
-
-.bento-price{
-  border-bottom: 1px solid black;
-}
-
-.center-contents{
-  display: flex;
-  justify-content: space-around;
-}
-
-.center-left{
-  margin-left: 90px;
-}
-
-
-.menus{
-  margin-top: 80px;
   font-size: 40px;
+  padding-top: 40px;
+  border-bottom: 1px solid gray;
+  text-shadow: 1px 2px 3px #808080;
+  font-style: italic;
+  padding-bottom: 7px;
 }
 
-.menu{
-  margin-top: 40px;
-  padding-bottom: 40px;
+.show-image-contents{
+  display: flex;
+  justify-content: space-between;
 }
 
-.food{
-  margin-bottom: 40px;
+.show-top-contents{
+  width: 100%;
 }
 
-.center-right{
+.image-top{
+  width: 600px;
+  height: 350px;
   margin-top: 50px;
 }
 
-.btn-blue{
-  margin-top: 50%;
-}
-
-.item-blue-btn{
+.top-right{
+  display: flex;
   text-align: center;
-  background-color: blue;
-  font-weight: bold;
-  color: white;
+}
+
+.price-bento{
+  border-bottom: 1px solid gray;
+  padding-bottom: 30px;
+  padding-left: 250px;
+  font-family: monospace;
+}
+
+.bento-price{
+  font-size: 30px;
+  margin-top: 50px;
+  padding-top: 60px;
+}
+
+.menu{
+  margin-top: 80px;
+}
+
+.food{
+  border-bottom: 1px solid gray;
+  font-size: 25px;
+}
+
+.nut{
+  margin-top: 20%;
+  font-size: 30px;
+  text-shadow: 1px 2px 3px #808080;
+  padding-bottom: 30px;
+  border-bottom: 1px solid gray;
+}
+
+.nut-contents{
+}
+
+.contents-nut{
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 50px;
+}
+
+.show-nut{
+  border: 1px solid gray;
+
+}
+
+.nut-lists{
+  border-bottom: 1px solid gray;
   font-size: 20px;
-  padding: 2vh 10vw;
+  padding: 15px 60px 15px 60px;
+  background-color:#DCDCDC;
 }
 
-.btn-red{
-  margin-top: 100px;
-}
-
-.item-red-btn{
+.nut-list{
+  font-size: 20px;
+  padding: 15px 60px 15px 60px;
   text-align: center;
-  background-color: red;
-  font-weight: bold;
-  color: white;
-  font-size: 20px;
-  padding: 2vh 10vw;
-}
-
-.btn-green{
-  margin-top: 100px;
-}
-
-.item-green-btn{
-  text-align: center;
-  background-color: green;
-  font-weight: bold;
-  color: white;
-  font-size: 20px;
-  padding: 2vh 10vw;
-}
-
-table{
-  width: 70%;
-  border-collapse: collapse;
-  border-spacing: 0;
   background-color: white;
 }
 
-table th,table td{
-  padding: 10px 0;
-  text-align: center;
+
+.center-right{
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding-bottom: 100px;
 }
 
-table tr:nth-child(odd){
-  background-color: #eee
+.item-blue-btn{
+  text-decoration: none;
+  margin-left: 40px;
+  margin-bottom: 100px;
+  color: white;
+  background-color: blue;
+  padding: 10px 60px 10px 60px;
+  border: 1px solid black;
+  border-radius: 1em;
 }
 
-.comment {
-  width: 40vw;
-  background-color: #fff;
-  text-align: center;
-  margin-left: 380px;
+.item-red-btn{
+  text-decoration: none;
+  margin-left: 40px;
+  margin-bottom: 100px;
+  color: white;
+  background-color: #FF0000;
+  padding: 10px 60px 10px 60px;
+  border: 1px solid black;
+  border-radius: 1em;
 }
 
-.comment-text {
-  width: 100%;
-  height: 100px;
-  padding: 50px;
-  border: solid 2px #dedede;
-  resize: none;
+.item-green-btn{
+  text-decoration: none;
+  margin-left: 40px;
+  margin-bottom: 100px;
+  color: white;
+  background-color: #FF0000;
+  padding: 10px 60px 10px 60px;
+  border: 1px solid black;
+  border-radius: 1em;
 }
-
-
-
-.comment-btn {
-  line-height: 48px;
-  background-color: orange;
-  border: 1px solid orange;
-  color: #fff;
-  width: 50%;
-  min-width: 150px;
-  font-size: 18px;
-  border-radius: 100px;
-  margin-bottom: 2vh;
-}
-
-
-.comment-flag-icon {
-  margin: 10px 5px 0 0;
