@@ -4,24 +4,30 @@
 
 .top-page-header{
   width: 100vw;
-  background-color: wheat;
- 
+  background-color:  #FFFFEE;
 }
 
+
 .search-bar-contents{
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 
 .healthLunch {
   font-size: 50px;
   text-shadow: 1px 2px 3px #808080;
+  text-decoration: none;
+  color: black;
+  font-family: cursive;
+  padding-top: 20px;
 }
 
 .nav {
   display: flex;
   justify-content: space-around;
   font-size: 20px;
+  margin-bottom: 25px;
 }
 
 .lists-left {
@@ -30,10 +36,13 @@
 
 .guide {
   margin-right: 50px;
+  text-decoration: none;
+  color: black;
 }
 
-.question {
-  
+.question-title{
+  text-decoration: none;
+  color: black;
 }
 
 .lists-right {
@@ -41,25 +50,30 @@
 }
 
 .logout {
- 
+  text-decoration: none;
+  color: black;
 }
 
 .login {
-  
+  color: black;
+  text-decoration: none;
 }
 
 .sign_up{
- margin-left: 40px;
+  color: black;
+  margin-left: 40px;
+  text-decoration: none;
 }
 
-.head_tel{
-  
+.bar-contents{
 }
 
-.head_num{
- 
-}
-
-.head_time{
-  
+.title-header{
+  font-size: 15px;
+  background-color: #F3FFD8;
+  width: 100vw;
+  height: 30px;
+  padding-left: 40%;
+  padding-top: 5px;
+  letter-spacing: 2px;
 }

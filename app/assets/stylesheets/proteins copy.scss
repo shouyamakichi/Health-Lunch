@@ -1,42 +1,98 @@
-
-
 .main-contents{
-  width: 100%;
-  height: 100%;
-  background-color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bento-menu{
+  background-color: #FFFFEE;
 }
 
 .main-pic{
-  text-align: center;
+  display:flex;
+  justify-content: center;
+  background-color: grey;
 }
 
-.item-contents{
-  margin-top: 40px;
-  width: 70%;
-  height: 50vh;
+.pic{
+  background-image: image-url('syokutaku.jpg');
+  background-color:rgba(255,255,255,0.3);
+  background-size: cover;
+  background-blend-mode: lighten;
+  background-position: center;
+  width: 80%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.pic-contents{
+  font-style: italic;
+  font-size: 25px;
+  opacity:0.8;
+  text-shadow: 1px 2px 3px #808080;
+  color: white;
+}
+
+.main-menu{
+  width:85vw;
+  margin-left: 50px;
 }
 
 .category-item{
-  margin-top: 40px;
-  margin: 0 auto;
-}
-
-.title{
-  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid	gray;
+  border-bottom-width: 0.3em;
 }
 
 .menu-category{
-  margin: 0 auto;
+  margin-top: 50px;
 }
 
-.item-menu{
-  margin-top: 50px;
+.category-menu{
+  width:90vw;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
+.title{
+  text-shadow: 1px 2px 3px #808080;
+  font-style: italic;
+}
+
+.link{
+  text-decoration: none;
 }
 
 .bento-contents{
-  width: 400px;
-  height: 300px;
+  width: 20vw;
+  height: 30vh;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  margin-right: 25px;
 }
+
+.item-info{
+  border-left: 1px solid  gray;
+  border-left-width: 0.1em;
+  margin-top: 20px;
+  color: black;
+  font-style: italic;
+  margin-bottom: 50px;
+  
+}
+
+.item-name{
+  font-size: 1.6rem;
+  margin-left: 15px;
+}
+
+.item-price{
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+
+

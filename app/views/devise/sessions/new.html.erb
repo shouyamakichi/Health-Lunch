@@ -1,34 +1,35 @@
-<%= render "shared/second-header" %>
-
 <%= form_with model:@user, url: user_session_path, class: 'registration-main', local: true do |f| %>
-<div class='form-wrap'>
-  <div class='form-header'>
-    <h1 class='form-header-text'>
-      会員情報入力
-    </h1>
-  </div>
-  <div class='login-flash-message'>
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
-  </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">メールアドレス</label>
-      <span class="indispensable">必須</span>
+<div class='form-login'>
+  <div class="login-wrap">
+    <div class='form-login-header'>
+      <h1 class='form-header'>
+        <%=link_to "会員情報入力", root_path, class: "new-text" %>
+      </h1>
     </div>
-    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
-  </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">パスワード</label>
-      <span class="indispensable">必須</span>
+    <div class="body-text">
+      <div class="text-body">
+        <div class="form-text">
+          <div class="text-form">
+            <div class="form">
+              <div class='form-mail-wrap'>
+                <label class="mail-text">メールアドレス</label>
+              </div>
+              <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+            </div>
+            <div class="form">
+              <div class='password-text-wrap'>
+                <label class="form-password">パスワード</label>
+              </div>
+              <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
+            </div>
+            <div class='login-btn'>
+              <%= f.submit "ログイン" ,class:"login-red-btn" %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
-  </div>
-  <div class='login-btn'>
-    <%= f.submit "ログイン" ,class:"login-red-btn" %>
-  </div>
+  </div> 
 </div>
 <% end %>
 
-<%= render "shared/second-footer" %>
