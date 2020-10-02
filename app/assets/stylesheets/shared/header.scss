@@ -25,7 +25,7 @@
 
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 20px;
   margin-bottom: 25px;
 }
@@ -47,25 +47,39 @@
 
 .lists-right {
   display: flex;
+  margin-left: 80px;
 }
 
 .logout {
   text-decoration: none;
   color: black;
-}
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: darkgray;
+  }
 
 .login {
   color: black;
   text-decoration: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: darkgray;
 }
 
 .sign_up{
   color: black;
   margin-left: 40px;
   text-decoration: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: darkgray;
 }
 
 .bar-contents{
+  background-color: #FFFFEE;
 }
 
 .title-header{
@@ -77,3 +91,108 @@
   padding-top: 5px;
   letter-spacing: 2px;
 }
+
+.menuWrapper {
+  position: relative;
+  z-index: 0;
+  width: 50px;
+  height: 50px;
+  margin-right: 80px;
+
+}
+
+#menuButton {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  z-index: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#menuButton span,
+#menuButton::before,
+#menuButton::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  width: 36px;
+  height: 4px;
+  margin: auto;
+  background: #000;
+}
+#menuButton span {
+  overflow: hidden;
+  z-index: 1;
+  color: #000;
+}
+#menuButton::before {
+  z-index: 2;
+  transform: translate(0, -12px);
+  content: "";
+}
+#menuButton::after {
+  z-index: 2;
+  transform: translate(0, 12px);
+  content: "";
+}
+
+.header-lists{
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  right: 3px;
+  top: 48px;
+  background-color: #EEEEEE;
+  border: 1px solid white;
+  padding-top: 50px;
+}
+
+.protein-list{
+  color: tomato;
+  font-size: 20px;
+  font-weight: initial;
+  text-shadow: 1px 1px 1px black;
+  border-bottom: 1px solid black;
+}
+
+.calorie-list{
+  color: tomato;
+  font-size: 20px;
+  font-weight: initial;
+  text-shadow: 1px 1px 1px black;
+  border-bottom: 1px solid black;
+}
+
+.soft-list{
+  color: tomato;
+  font-size: 20px;
+  font-weight: initial;
+  text-shadow: 1px 1px 1px black;
+  border-bottom: 1px solid black;
+}
+
+.question-list{
+  color: tomato;
+  font-size: 20px;
+  font-weight: initial;
+  text-shadow: 1px 1px 1px black;
+  border-bottom: 1px solid black;
+}
+
+.page-list{
+  color: tomato;
+  font-size: 20px;
+  font-weight: initial;
+  text-shadow: 1px 1px 1px black;
+  border-bottom: 1px solid black;
+}
+
+.hidden{
+  display: none;
+}
+

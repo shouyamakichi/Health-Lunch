@@ -9,10 +9,6 @@
       </div>
     </div>
     <div class='nav'>
-      <ul class='lists-left'>
-        <li><%=link_to 'ご利用ガイド', '#', class: "guide" %><li>
-        <li><%=link_to 'よくある質問', '#', class: "question-title" %></li>
-      </ul>
       <ul class='lists-right'>
         <% if user_signed_in? %>
           <li><%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout"%></li>
@@ -21,9 +17,19 @@
           <li><%=link_to '新規登録', new_user_registration_path, class: "sign_up"%></li>
         <% end %>
       </ul>
+      <div class="menuWrapper">
+        <a href="#menu" id="menuButton"><span>MENU</span></a>
+        <ul class="header-lists hidden" id="pull-down">
+          <li><%= link_to 'たんぱくケア', proteins_path , class: "protein-list" %></li>
+          <li><%= link_to 'カロリーケア', calories_path, class: "calorie-list" %></li>
+          <li><%= link_to 'やわらか食事', softs_path, class: "soft-list" %></li>
+          <li><%= link_to 'よくある質問', "#", class: "question-list" %></li>
+          <li><%= link_to 'トップページへ戻る', root_path, class: "page-list" %></li>
+        </ul>
+      </div>
     </div>
     <div class='bar-contents'>
-      <p class='title-header'>栄養バランスの取れたお弁当です。</p>
+      <p class='title-header'></p>
     </div>
   </div>
 </header>
