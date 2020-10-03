@@ -12,21 +12,21 @@
         <label class='text-form'>郵便番号</label>
         <span class='indispensable'>必須</span>
     </div>
-    <%= f.text_field :zip, class:"input-default", id:"postal-code" %>
+    <%= f.text_field :zip01, class:"input-default", id:"postal-code",onKeyUp: "AjaxZip3.zip2addr(this,'zip01','pref01','addr01');" %>
   </div>
   <div class='buyer-body'>
     <div class='form-text-wrap'>
         <label class='text-form'>都道府県</label>
         <span class='indispensable'>必須</span>
     </div>
-    <%= f.text_field :region, class:"input-default", id:"region" %>
+    <%= f.text_field :pref01, class:"input-default", name: "pref01", id:"pref01"%>
   </div>
   <div class='buyer-body'>
     <div class='form-text-wrap'>
         <label class='text-form'>市町村</label>
         <span class='indispensable'>必須</span>
     </div>
-    <%= f.text_field :city, class:"input-default", id:"city"%>
+    <%= f.text_field :addr01, class:"input-default", name: "addr01", id:"addr01" %>
   </div>
   <div class='buyer-body'>
     <div class='form-text-wrap'>
@@ -38,7 +38,6 @@
   <div class='buyer-body'>
     <div class='form-text-wrap'>
         <label class='text-form'>建物名</label>
-        <span class='indispensable'>必須</span>
     </div>
    <%= f.text_field :building, class:"input-default", id:"building"%>
   </div>
@@ -52,6 +51,7 @@
   
     <div class='seq'>
       <span class='block-header'>カード情報</span>
+          <span class="indispensable">必須</span>
       <div class='card-number'>
       <%= f.text_field :number, class:"input-default",id:"card-number", placeholder:"カード番号",maxlength:"16" %>
       </div>  
