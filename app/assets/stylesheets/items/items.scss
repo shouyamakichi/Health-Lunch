@@ -54,7 +54,7 @@
 }
 
 .list{
-  width: 33vh;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,9 +63,8 @@
 
 .list-pict {
   margin-bottom: 20px;
-  width: 100%;
   border-radius: 10px;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .bento-list-text{
@@ -92,12 +91,12 @@
 // 選ばれる理由
 .feature-contents{
   background-image: image-url('btn11.jpg');
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
   background-size: cover;
   background-blend-mode: lighten;
   background-position: center;
   width: 100%;
-  height: 700px;
+  height: 600px;
   color:#A7F1FF;
   opacity: 0.9;
   text-shadow: 1px 2px 3px black;
@@ -158,4 +157,57 @@
 
 .average-score-display{
   font-size: 16px;
+}
+
+
+// スマホ対応時
+@media (max-width: 599px){
+  .main{
+  
+  }
+
+  .advertising{
+    font-size: 50px;
+  }
+
+  .picture-contents{
+    font-size: 40px;
+  }
+
+  .bento-lists{
+    width: 100%;
+  }
+
+  .bento-list-text{
+    font-size: 20px;
+  }
+
+  .bentos-lists{
+  }
+
+  .list-pict{
+    width: 400px;
+  }
+
+  .bento-list-title{
+    font-size: 10px;
+  }
+
+  .bento-list-explain{
+    font-size: 10px;
+  }
+
+  .second-health-title{
+    font-size:40px;
+  }
+
+  .menu-acount{
+    font-size: 30px;
+  }
+
+  .acount{
+    font-size: 15px;
+  }
+
+
 }

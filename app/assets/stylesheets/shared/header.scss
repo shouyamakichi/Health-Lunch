@@ -115,7 +115,7 @@ a {
 	left: 20px;
 	display: inline-block;
 }
-/* menu */
+
 .cp_offcm04 .cp_menu {
 	position: fixed;
 	top: 0;
@@ -154,7 +154,7 @@ a {
 	-webkit-transform: translateX(100vw);
 	        transform: translateX(100vw);
 }
-/* menu toggle */
+
 .cp_offcm04 #cp_toggle04 ~ label {
 	display: block;
   padding: 50px;
@@ -183,4 +183,34 @@ a {
 
 .admin{
   background-color: red;
+}
+
+@media (max-width: 599px) {
+
+  .nav{
+   
+  }
+
+  
+  .sign_up{
+    font-size: 3px;
+    margin: 0 auto;
+    padding: 5px;
+  }
+  
+  .login{
+    font-size: 3px;
+    padding: 0;
+    margin-right: 20px;
+    padding: 5px;
+  }
+
+  .logout{
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  .picture-contents{
+    font-size: 20px;
+  }
 }
