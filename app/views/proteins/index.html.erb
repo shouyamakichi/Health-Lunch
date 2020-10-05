@@ -18,7 +18,7 @@
             <%= link_to protein_path(protein.id), class: 'link' do%>
               <%= image_tag protein.image, class: 'bento-contents' if protein.image.attached? %>
               <div class="item-info">
-                <h3 class='item-name'><%= protein.name %>弁当<h3>
+                <h3 class='item-name'><%= protein.name %><h3>
                 <div class='item-price'>
                   <span class='price'><%= protein.price %>円(税抜)</span>
                 </div>
@@ -29,13 +29,6 @@
         </ul>
       </div>
     </div>
-    <% if user_signed_in? %>
-      <% if current_user == @user || current_user.admin? %>
-        <div class='btn-blue'>
-          <%= link_to '商品の編集', new_protein_path, method: :get,class: 'item-blue-btn'%>
-        </div>
-      <% end %>
-    <% end %>
   </div>
 <%= render "shared/footer" %>
 </div>

@@ -28,6 +28,11 @@
             <li><%= link_to 'やわらか食事', softs_path %></li>
             <li><%= link_to 'よくある質問', "#" %></li>
             <li><%= link_to 'トップページへ戻る', root_path %></li>
+            <% if user_signed_in? %>
+              <% if current_user == @user || current_user.admin? %>
+                <li class='admin'><%= link_to '商品の登録', new_protein_path %></li>
+              <% end %>
+            <% end %>
           </ul>
           </div>
         </div>

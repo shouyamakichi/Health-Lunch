@@ -80,7 +80,6 @@ ActiveRecord::Schema.define(version: 2020_09_27_041648) do
 
   create_table "proteins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.string "acount", null: false
     t.integer "price", null: false
     t.string "energy", null: false
     t.string "prote", null: false
