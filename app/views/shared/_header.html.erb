@@ -17,15 +17,20 @@
           <li><%=link_to '新規登録', new_user_registration_path, class: "sign_up"%></li>
         <% end %>
       </ul>
-      <div class="menuWrapper">
-        <a href="#menu" id="menuButton"><span>MENU</span></a>
-        <ul class="header-lists hidden" id="pull-down">
-          <li><%= link_to 'たんぱくケア', proteins_path , class: "protein-list" %></li>
-          <li><%= link_to 'カロリーケア', calories_path, class: "calorie-list" %></li>
-          <li><%= link_to 'やわらか食事', softs_path, class: "soft-list" %></li>
-          <li><%= link_to 'よくある質問', "#", class: "question-list" %></li>
-          <li><%= link_to 'トップページへ戻る', root_path, class: "page-list" %></li>
-        </ul>
+      <div class="cp_cont">
+	      <div class="cp_offcm04">
+          <input type="checkbox" id="cp_toggle04">
+          <label for="cp_toggle04"><span></span></label>
+          <div class="cp_menu">
+          <ul >
+            <li><%= link_to 'たんぱくケア', proteins_path  %></li>
+            <li><%= link_to 'カロリーケア', calories_path %></li>
+            <li><%= link_to 'やわらか食事', softs_path %></li>
+            <li><%= link_to 'よくある質問', "#" %></li>
+            <li><%= link_to 'トップページへ戻る', root_path %></li>
+          </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class='bar-contents'>
