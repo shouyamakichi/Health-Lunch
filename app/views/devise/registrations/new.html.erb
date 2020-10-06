@@ -1,17 +1,14 @@
-<%# <%= render "shared/second-header" %> 
 
-<%# 「モデル名」にはUserモデルであれば@userを渡しましょう。「新規登録機能へのパス」は、devise導入後にrails routesを実行してdevise/registrations#createへのパスを確認し、記載してください。 %>
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
      <%=link_to "新規会員登録", root_path, class: "new-text" %>
     </h1>
+<%# <%= render "shared/second-header" %> 
   <%= render 'shared/error_messages', model:f.object %>
   </div>
 
-  <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-  <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
   <div class="form-wrapper">
     <div class="second-wrapper">
       <div class="form-group">
