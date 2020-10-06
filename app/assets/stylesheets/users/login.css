@@ -20,13 +20,15 @@
   text-shadow: 1px 2px 3px #808080;
 }
 
+
+
 .body-text{
   border: 1px solid black;
-  padding: 80px 60px 60px 60px;
+  padding: 80px 80px 60px 80px;
   margin-top: 40px;
   background-color: white;
   opacity: 0.8;
-  margin-left: 70px;
+  margin-left: 65px;
 }
 
 .form{
@@ -38,6 +40,11 @@
 .form-mail-wrap{
   margin-bottom: 10px;
   font-size: 20px;
+}
+
+.input-def{
+  padding: 5px;
+  width: 30vw;
 }
 
 .password-text-wrap{
@@ -63,4 +70,37 @@
   text-decoration: none;
   color: #fff;
   width: 50%;
+}
+
+/* スマホ対応 */
+@media (max-width: 599px) {
+
+  .form-header{
+    padding-top: 40px;
+  }
+
+  .new-text{
+    margin-left: -10%;
+  }
+
+  .body-text{
+    margin: 0 auto;
+    margin-top: 20%;
+  }
+  
+  .input-def{
+    
+  }
+
+  .mail-text{
+    font-size: 12px;
+  }
+  
+  .form-password{
+    font-size: 12px;
+  }
+
+  .login-red-btn{
+    width: 150px;
+  }
 }
