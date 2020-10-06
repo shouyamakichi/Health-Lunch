@@ -141,3 +141,30 @@
   border: 1px solid black;
   border-radius: 1em;
 }
+
+@media (max-width: 599px) {
+
+  .bento-price{
+    margin-top: -20px;
+    margin-left: 80px;
+  }
+
+  .show-image-contents{
+    display: block;
+  }
+
+  .contents-nut{
+    display: block;
+  }
+
+  .nut-lists{
+    text-align: center;
+  }
+
+  .nut-list{
+    
+  }
+
+  .show-nut{
+  }
+}

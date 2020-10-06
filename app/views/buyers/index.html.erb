@@ -17,8 +17,9 @@
       </div>
     </div>
     <%= form_with id:'card-form', model: @buyer, url: protein_buyers_path(@protein.id), class: 'transaction-form-wrap', local: true do |f| %>
+    <div class='buyers-con'>
       <div class="buyers-header">
-     <%= render 'shared/error_messages', model: f.object %>
+      <%= render 'shared/error_messages', model: f.object %>
         <div class="buyers">
           <div class='buyer-body'>
             <div class='form-text-wrap'>
@@ -89,10 +90,12 @@
             </div>
           </div>
         </div>
-      <div class='buy-btn'>
-        <%= f.submit "購入を確定する" ,class:"buy-red-btn" %>
+      </div>
+      <div class='buyer-btn'>
+        <%= f.submit "購入を確定する" ,class:"buyer-red-btn" %>
       </div>
       </div>
+    </div>
     <% end %>
   </div>
 </div>

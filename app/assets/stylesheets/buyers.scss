@@ -135,17 +135,26 @@
   display: flex;
 }
 
+.indispensable{
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
 
 .input-expiration-date{
   margin-bottom: 20px;
 }
 
-.buy-btn{
+.buyer-btn{
   margin-top: 50px;
   margin-bottom: 100px;
 }
 
-.buy-red-btn{
+.buyer-red-btn{
   width: 40%;
   display: inline-block;
   padding: 0.5em 1em;
@@ -164,4 +173,48 @@
   border-bottom: none;
 }
 
+// スマホレイアウト
+@media (max-width: 599px) {
+.buyer-second-contents{
+  display: block;
+}
 
+.buy{
+  margin-left: 70px;
+}
+
+.buy-item-img{
+  margin-left: 50px;
+  height: 300px;
+}
+
+.buyer-bento-name{
+  font-size: 30px;
+  padding-left: 30vw;
+  border-bottom: none;
+}
+
+.name-price{
+  margin-left: 40px;
+}
+
+.buyer-bento-price{
+  padding-left: 30vw;
+  border-bottom: none; 
+  font-size: 25px;
+}
+
+.buyers-con{
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+  margin-top: 40px;
+}
+
+.buyer-btn{
+  width: 500px;
+  margin-left: 40px;
+  margin-bottom: -100px;
+  padding-bottom: 80px;
+}
+}

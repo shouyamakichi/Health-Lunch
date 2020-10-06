@@ -158,7 +158,7 @@ a {
 .cp_offcm04 #cp_toggle04 ~ label {
 	display: block;
   padding: 50px;
-  margin-top: 100px;
+  margin-top: 80px;
 	cursor: pointer;
 	-webkit-transition: 0.5s transform;
 	        transition: 0.5s transform;
@@ -188,21 +188,21 @@ a {
 @media (max-width: 599px) {
 
   .nav{
-   
+    margin-left: -80px;
+    margin-top: -40px;
   }
 
+  .cp_offcm04 #cp_toggle04 ~ label {
+    margin-top: -2px;
+    margin-top: 5px;
+  }
   
   .sign_up{
     font-size: 3px;
-    margin: 0 auto;
-    padding: 5px;
   }
   
   .login{
     font-size: 3px;
-    padding: 0;
-    margin-right: 20px;
-    padding: 5px;
   }
 
   .logout{
