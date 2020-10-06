@@ -8,21 +8,19 @@
         <%= link_to 'HealthLunch', root_path, method: :get, class: "healthLunch"%>
       </div>
     </div>
-    <div class='nav'>
-      <ul class='lists-right'>
-        <% if user_signed_in? %>
-          <li><%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout"%></li>
-        <% else %>
-          <li><%=link_to 'ログイン', new_user_session_path, class: "login" %></li>
-          <li><%=link_to '新規登録', new_user_registration_path, class: "sign_up"%></li>
-        <% end %>
-      </ul>
+    <%# <div class='nav'> %>
       <div class="cp_cont">
 	      <div class="cp_offcm04">
           <input type="checkbox" id="cp_toggle04">
           <label for="cp_toggle04"><span></span></label>
           <div class="cp_menu">
           <ul >
+          <% if user_signed_in? %>
+           <li><%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout"%></li>
+          <% else %>
+           <li><%=link_to 'ログイン', new_user_session_path, class: "login" %></li>
+           <li><%=link_to '新規登録', new_user_registration_path, class: "sign_up"%></li>
+          <% end %>
             <li><%= link_to 'たんぱくケア', proteins_path  %></li>
             <li><%= link_to 'カロリーケア', calories_path %></li>
             <li><%= link_to 'やわらか食事', softs_path %></li>
@@ -41,6 +39,6 @@
     <div class='bar-contents'>
       <p class='title-header'></p>
     </div>
-  </div>
+  <%# </div> %>
 </header>
 

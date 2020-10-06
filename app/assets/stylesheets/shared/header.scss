@@ -25,11 +25,7 @@
   font-family: cursive;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-}
+
 
 .lists-left {
   display: flex;
@@ -53,35 +49,15 @@
 }
 
 .logout {
-  text-decoration: none;
-  color: black;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  background-color:  #FFFFEE;
-  font-weight: bold;
-  margin-left: 80px;
-  }
+  background-color: #33CC66;
+}
 
 .login {
-  color: black;
-  text-decoration: none;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  background-color:  #FFFFEE;
-  font-weight: bold;
+  background-color: #33CC66;
 }
 
 .sign_up{
-  color: black;
-  margin-left: 40px;
-  text-decoration: none;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  background-color: #FFFFE;
-  font-weight: bold;
+  background-color: #33CC66;
 }
 
 .bar-contents{
@@ -106,7 +82,6 @@ a {
 	color: inherit;
 }
 .cp_cont {
-  height: 15vh;
   z-index: 40;
 }
 .cp_offcm04 {
@@ -156,9 +131,10 @@ a {
 }
 
 .cp_offcm04 #cp_toggle04 ~ label {
-	display: block;
+  display: block;
+  font-size: 25px;
   padding: 50px;
-  margin-top: 80px;
+  margin-top: -20px;
 	cursor: pointer;
 	-webkit-transition: 0.5s transform;
 	        transition: 0.5s transform;
@@ -192,22 +168,14 @@ a {
     margin-top: -40px;
   }
 
-  .cp_offcm04 #cp_toggle04 ~ label {
-    margin-top: -2px;
-    margin-top: 5px;
-  }
-  
-  .sign_up{
-    font-size: 3px;
-  }
-  
-  .login{
-    font-size: 3px;
+  .healthLunch{
+    font-size: 50px;
   }
 
-  .logout{
-    margin: 0 auto;
-    font-size: 15px;
+  .cp_offcm04 #cp_toggle04 ~ label {
+    margin-left: -30px;
+    font-size: 20px;
+    margin-top: -30px
   }
 
   .picture-contents{
