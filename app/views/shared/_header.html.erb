@@ -8,7 +8,6 @@
         <%= link_to 'HealthLunch', root_path, method: :get, class: "healthLunch"%>
       </div>
     </div>
-    <%# <div class='nav'> %>
       <div class="cp_cont">
 	      <div class="cp_offcm04">
           <input type="checkbox" id="cp_toggle04">
@@ -22,13 +21,18 @@
            <li><%=link_to '新規登録', new_user_registration_path, class: "sign_up"%></li>
           <% end %>
             <li><%= link_to 'たんぱくケア', proteins_path  %></li>
-            <li><%= link_to 'カロリーケア', calories_path %></li>
+            <li><%= link_to 'カロリーケア', "#" %></li>
             <li><%= link_to 'やわらか食事', softs_path %></li>
             <li><%= link_to 'よくある質問', "#" %></li>
             <li><%= link_to 'トップページへ戻る', root_path %></li>
             <% if user_signed_in? %>
               <% if current_user == @user || current_user.admin? %>
                 <li class='admin'><%= link_to '商品の登録', new_protein_path %></li>
+              <% end %>
+            <% end %>
+            <% if user_signed_in? %>
+              <% if current_user == @user || current_user.admin? %>
+                <li class='admin'><%= link_to 'やわらか商品登録', new_soft_path %></li>
               <% end %>
             <% end %>
           </ul>
@@ -39,6 +43,5 @@
     <div class='bar-contents'>
       <p class='title-header'></p>
     </div>
-  <%# </div> %>
 </header>
 

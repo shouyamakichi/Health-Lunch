@@ -5,8 +5,6 @@ class BuyerDelivery
 
   with_options presence:true do
     validates :zip01
-    # validates :pref01
-    # validates :addr01, format: { with: /\A[一-龥ぁ-ん]/}
     validates :reference
     validates :phone_number, format: { with: /\A\d{11}\z/}
     validates :token

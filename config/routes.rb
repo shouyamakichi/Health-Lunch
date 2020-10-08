@@ -14,7 +14,8 @@ Rails.application.routes.draw do
     resources :buyers, only: [:index, :create]
   end
 
-  resources :calories, only: [:index, :new, :create]
-  resources :softs, only: :index
+  resources :softs do
+    resources :shohins, only: [:index, :create]
+  end
 end
  

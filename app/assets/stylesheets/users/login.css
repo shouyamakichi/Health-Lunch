@@ -89,15 +89,15 @@
   }
   
   .input-def{
-    
+    width: 50vw;
   }
 
   .mail-text{
-    font-size: 12px;
+    font-size: 20px;
   }
   
   .form-password{
-    font-size: 12px;
+    font-size: 20px;
   }
 
   .login-red-btn{

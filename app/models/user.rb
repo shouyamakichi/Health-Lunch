@@ -3,7 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   has_many :items
-  has_many :protein
+  has_many :proteins
+  has_many :softs
   has_many :reviews, dependent: :destroy
   
   devise :database_authenticatable, :registerable,

@@ -1,7 +1,7 @@
-class Protein < ApplicationRecord
+class Soft < ApplicationRecord
   has_one_attached :image
   belongs_to :user
-  has_one :buyer
+  has_one :shohin
 
   with_options presence:true do
     validates :image
