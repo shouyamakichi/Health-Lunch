@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :items
   has_many :proteins
   has_many :softs
+  has_many :calos
   has_many :reviews, dependent: :destroy
   
   devise :database_authenticatable, :registerable,

@@ -1,0 +1,75 @@
+<%= render "shared/header" %>
+
+<div class='show-menu'>
+  <div class='show-contents'>
+    <div class='show-top-contents'>
+      <div class='bento-name'>
+        <span><%= @calo.name %></span>
+      </div>
+      <div class='show-image-contents'>
+        <div class='top-image'>
+          <%= image_tag @calo.image, class:'image-top'%>
+        </div>
+        <div class='top-right'>
+          <div class='bento-price'>
+            <span class='price-bento'><%= @calo.price%>円(税抜）</span>
+            <ul class='menu'>
+              <li class= 'food'><%= @calo.first %></li>
+              <li class= 'food'><%= @calo.second %></li>
+              <li class= 'food'><%= @calo.third %></li>
+              <li class= 'food'><%= @calo.forth %></li>
+              <li class= 'food'><%= @calo.fifth %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='center-contents'>
+      <div class='show-cneter-contents'>
+        <div class='show-contents-center'>
+          <h3 class='nut'>栄養成分</h3>
+        </div>
+      </div>
+      <div class='nut-contents'>
+        <div class='contents-nut'>
+          <div class='show-nut'>
+            <p class= 'nut-lists'>エネルギー</p>
+            <p class='nut-list'><%= @calo.energy%>kcal</p>
+          </div>
+          <div class='show-nut'>
+            <p class= 'nut-lists'>たんぱく</p>
+            <p class='nut-list'><%= @calo.prote %>g</p>
+          </div>
+          <div class='show-nut'>
+            <p class= 'nut-lists'>脂質</p>
+            <p class='nut-list'><%= @calo.Lipid%>g</p>
+          </div>
+          <div class='show-nut'>
+            <p class= 'nut-lists'>塩分</p>
+            <p class='nut-list'><%= @calo.salt%>g</p>
+          </div>
+          <div class='show-nut'>
+            <p class= 'nut-lists'>炭水化物</p>
+            <p class='nut-list'><%= @calo.carbo%>g</p>
+          </div>
+        </div>
+      </div>
+      <div class='center-right'>
+        <% if user_signed_in? %>
+          <% if current_user == @user || current_user.admin? %>
+            <div class='btn-blue'>
+              <%= link_to '商品の編集', edit_calo_path, method: :get,class: 'item-blue-btn'%>
+            </div>
+            <div class='btn-red'>
+              <%= link_to '削除', calo_path, method: :delete, class: 'item-red-btn'%>
+            </div>
+          <% else %>
+              <div class='btn-green'>
+                <%= link_to '購入画面に進む', calo_bentos_path(@calo), class: 'item-green-btn'%>
+              </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -17,5 +17,10 @@ Rails.application.routes.draw do
   resources :softs do
     resources :shohins, only: [:index, :create]
   end
+
+  resources :calos do
+    resources :bentos, only: [:index, :create]
+  end
+
 end
  

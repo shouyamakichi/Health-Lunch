@@ -10,13 +10,13 @@
   </div>
   <div class='buyer-second-contents'>
     <div class='bento-buyer-name'>
-      <%= image_tag @soft.image, class: 'buy-item-img' %>
+      <%= image_tag @calo.image, class: 'buy-item-img' %>
       <div class='name-price'>
-        <div class='buyer-bento-name'><%= @soft.name %></div>
-        <div class= 'buyer-bento-price'><%= @soft.price %>円(税抜)</div>
+        <div class='buyer-bento-name'><%= @calo.name %></div>
+        <div class= 'buyer-bento-price'><%= @calo.price %>円(税抜)</div>
       </div>
     </div>
-    <%= form_with id:'cards-form', model: @shohin, url: soft_shohins_path(@soft.id), class: 'transaction-form-wrap', local: true do |f| %>
+    <%= form_with id:'money-form', model: @bento, url: calo_bentos_path(@calo.id), class: 'transaction-form-wrap', local: true do |f| %>
     <div class='buyers-con'>
       <div class="buyers-header">
       <%= render 'shared/error_messages', model: f.object %>

@@ -2,7 +2,6 @@ class Item < ApplicationRecord
   has_many :reviews, dependent: :destroy
   belongs_to :user
   has_one_attached :image
-  belongs_to :protein
 
 
   def avg_score

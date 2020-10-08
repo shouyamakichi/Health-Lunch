@@ -1,0 +1,34 @@
+<%= render "shared/header" %>
+
+<div class='main-contents'>
+  <div class='bento-menu'>
+    <div class='main-pic'>
+      <div class='pic'>
+        <p class='pic-contents'>1食あたりのたんぱく質量が13ｇ程度、塩分2.0ｇ、カリウム500ｍｇ、リン270mg以下に抑えた食事</p>
+      </div>
+    </div>
+    <div class='main-menu'>
+      <div class='category-item'>
+        <h2 class='title-protein'>カロリーケアメニュー<h2>
+      </div>
+      <div class='menu-category'>
+        <ul class='category-menu'>
+          <% @calos.each do |calo| %>
+          <li class='menu'>
+            <%= link_to calo_path(calo.id), class: 'link' do%>
+              <%= image_tag calo.image, class: 'bento-contents' if calo.image.attached? %>
+              <div class="item-info">
+                <h3 class='item-name'><%= calo.name %><h3>
+                <div class='item-price'>
+                  <span class='price'><%= calo.price %>円(税抜)</span>
+                </div>
+              </div>
+            <% end %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
