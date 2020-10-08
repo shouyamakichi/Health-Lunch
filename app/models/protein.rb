@@ -2,7 +2,6 @@ class Protein < ApplicationRecord
   has_one_attached :image
   belongs_to :user
   has_one :buyer
-  ratyrate_rateable "food"
 
   with_options presence:true do
     validates :image

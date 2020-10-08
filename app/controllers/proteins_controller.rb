@@ -52,7 +52,7 @@ class ProteinsController < ApplicationController
   private
   
   def proteins_params
-    params.require(:protein).permit(:image, :name, :acount, :price, :energy, :prote, :salt, :Lipid, :carbo, :first, :second, :third, :forth,:fifth).merge(user_id: current_user.id)
+    params.require(:protein).permit(:image, :name, :price, :energy, :prote, :salt, :Lipid, :carbo, :first, :second, :third, :forth,:fifth).merge(user_id: current_user.id)
   end
   
   #管理者のみnew,editへURL直接打ち込んでの遷移可能

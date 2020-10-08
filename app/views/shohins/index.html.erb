@@ -1,0 +1,102 @@
+<%= render "shared/header" %>
+<div class='buyer-contents'>
+  <div class='image-sumaho' >
+    <div class="bgImg src1"></div>
+    <div class="bgImg src2"></div>
+    <div class="bgImg src3"></div>
+  </div>
+  <div class='buyer-title'>
+    <p class='buy'>購入情報入力</p>
+  </div>
+  <div class='buyer-second-contents'>
+    <div class='bento-buyer-name'>
+      <%= image_tag @soft.image, class: 'buy-item-img' %>
+      <div class='name-price'>
+        <div class='buyer-bento-name'><%= @soft.name %></div>
+        <div class= 'buyer-bento-price'><%= @soft.price %>円(税抜)</div>
+      </div>
+    </div>
+    <%= form_with id:'card-form', model: @shohin, url: soft_shohins_path(@soft.id), class: 'transaction-form-wrap', local: true do |f| %>
+    <div class='buyers-con'>
+      <div class="buyers-header">
+      <%= render 'shared/error_messages', model: f.object %>
+        <div class="buyers">
+          <div class='buyer-body'>
+            <div class='form-text-wrap'>
+                <label class='text-form'>郵便番号</label>
+                <span class='indispensable'>必須</span>
+            </div>
+            <%= f.text_field :zip01, class:"input", id:"postal-code",onKeyUp: "AjaxZip3.zip2addr(this,'zip01','pref01','addr01');" %>
+          </div>
+          <div class='buyer-body'>
+            <div class='form-text-wrap'>
+                <label class='text-form'>都道府県</label>
+                <span class='indispensable'>必須</span>
+            </div>
+            <%= f.text_field :pref01, class:"input", name: "pref01", id:"pref01"%>
+          </div>
+          <div class='buyer-body'>
+            <div class='form-text-wrap'>
+                <label class='text-form'>市町村</label>
+                <span class='indispensable'>必須</span>
+            </div>
+            <%= f.text_field :addr01, class:"input", name: "addr01", id:"addr01" %>
+          </div>
+          <div class='buyer-body'>
+            <div class='form-text-wrap'>
+                <label class='text-form'>番地</label>
+                <span class='indispensable'>必須</span>
+            </div>
+            <%= f.text_field :reference, class:"input", id:"reference"%>
+          </div>
+          <div class='buyer-body'>
+            <div class='form-text-wrap'>
+                <label class='text-form'>建物名</label>
+            </div>
+          <%= f.text_field :building, class:"input", id:"building"%>
+          </div>
+          <div class='buyer-body'>
+            <div class='form-text-wrap'>
+                <label class='text-form'>電話番号</label>
+                <span class='indispensable'>必須</span>
+            </div>
+          <%= f.text_field :phone_number, class:"input", id:"phone_number" %>
+          </div>
+        </div>  
+          <div class='seq'>
+            <span class='block-header'>カード情報</span>
+                <span class="indispensable">必須</span>
+            <div class='card-number'>
+            <%= f.text_field :number, class:"input",id:"card-number", placeholder:"カード番号",maxlength:"16" %>
+            </div>  
+            <div class="form-group">
+              <div class='form-text-wrap'>
+                <label class="form-text">有効期限</label>
+                <span class="indispensable">必須</span>
+              </div>
+              <div class='input-expiration-date-wrap'>
+                <%= f.text_area :exp_month, class:"input-expiration-date", id:"card-exp-month", placeholder:"例)3" %>
+                <p>月</p>
+                <%= f.text_area :exp_year, class:"input-expiration-date", id:"card-exp-year", placeholder:"例)23" %>
+                <p>年</p>
+              </div>
+            </div>
+            <div class="form-group">
+                <div class='form-text-wrap'>
+                  <label class="form-text">セキュリティコード</label>
+                  <span class="indispensable">必須</span>
+                </div>
+                <%= f.text_field :cvc,class:"input", id:"card-cvc", placeholder:"カード背面4桁もしくは3桁の番号", maxlength:"4" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='buyer-btn'>
+        <%= f.submit "購入を確定する" ,class:"buyer-red-btn" %>
+      </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+

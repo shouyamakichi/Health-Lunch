@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
 <div class='main'>
     <div class='title-contents'>
+    <div id="pic_src"></div>
       <h1 class='advertising'>
         おうちご飯を応援
       </h1>
@@ -16,50 +17,52 @@
         選択メニュー
       </h2>
     </div>
-    <ul class='bento-lists'>
-      <li class='list'>
-        <%= link_to(proteins_path) do %>
-          <%= image_tag "bento7.jpg", class: "list-pict" %> 
-        <% end %>
-        <h3 class='bento-list-text'>
-        たんぱくケア
-        </h3>
-        <p class='bento-list-title'>
-          腎臓病・透析の方
-        </p>
-        <p class='bento-list-explain'>
-        1食あたりのたんぱく質量が13g程
-        </p>
-      </li>
-      <li class='list'>
-        <%=link_to(calories_path) do%>
-          <%=image_tag "bento4.jpg", class: "list-pict"%>
-        <% end %>
-        <h3 class='bento-list-text'>
-          カロリーケア
-        </h3>
-        <p class='bento-list-title'>
-          肥満の方
-        </p>
-        <p class='bento-list-explain'>
-          1食あたりのカロリーが約400Kcal
-        </p>
-      </li>
-      <li class='list'>
-        <%=link_to(softs_path) do%>
-          <%=image_tag "bento4.jpg", class: "list-pict"%>
-        <% end %>
-        <h3 class='bento-list-text'>
-          やわらか食事
-        </h3>
-        <p class='bento-list-title'>
-          やわらかく調整した食事メニュー
-        </p>
-        <p class='bento-list-explain'>
-          歯茎でつぶせる固さを目安にしたものです
-        </p>
-      </li>
-    </ul>
+    <div class='bentos-lists'>
+      <ul class='bento-lists'>
+        <li class='list'>
+          <%= link_to(proteins_path) do %>
+            <%= image_tag "bnt8.jpg", class: "list-pict" %> 
+          <% end %>
+          <h3 class='bento-list-text'>
+          たんぱくケア
+          </h3>
+          <p class='bento-list-title'>
+            腎臓病・透析の方
+          </p>
+          <p class='bento-list-explain'>
+          1食あたりのたんぱく質量が13g程
+          </p>
+        </li>
+        <li class='list'>
+          <%=link_to '#' do%>
+            <%=image_tag "bnt8.jpg", class: "list-pict"%>
+          <% end %>
+          <h3 class='bento-list-text'>
+            カロリーケア
+          </h3>
+          <p class='bento-list-title'>
+            肥満の方
+          </p>
+          <p class='bento-list-explain'>
+            1食あたりのカロリーが約400Kcal
+          </p>
+        </li>
+        <li class='list'>
+          <%=link_to(softs_path) do%>
+            <%=image_tag "bnt8.jpg", class: "list-pict"%>
+          <% end %>
+          <h3 class='bento-list-text'>
+            やわらか食事
+          </h3>
+          <p class='bento-list-title'>
+            やわらかく調整した食事メニュー
+          </p>
+          <p class='bento-list-explain'>
+            歯茎でつぶせる固さを目安にしたものです
+          </p>
+        </li>
+      </ul>
+    </div>
     <div class='feature-contents'>
       <h2 class='second-health-title'>
         HealthLunchが選ばれる理由
@@ -67,7 +70,7 @@
       <div class='textArea'>
         <div class='text-Box'>
           <div class='discBox'>
-            <h3 class='menu'>1.管理栄養士監修で安心</h3>
+            <h3 class='menu-acount'>1.管理栄養士監修で安心</h3>
             <p class='acount'>
             管理栄養士・栄養士が考案した弁当の宅配サービス。食の基本であるおいしさにこだわりながら、カロリーや塩分に配慮したメニューの豊富さ！
             </p>
@@ -75,7 +78,7 @@
         </div>
         <div class='text-Box'>
           <div class="discBox">
-            <h3 class='menu'>2.冷凍だから食べたい時にすぐ美味しい</h3>
+            <h3 class='menu-acount'>2.冷凍だから食べたい時にすぐ美味しい</h3>
             <p class='acount'>
             冷凍でお届けするので、食べたいときにチンするだけ！決められた時間に縛られることなく、自分のペースで食べられる！
             </p>
@@ -122,4 +125,3 @@
     </div>
   </section>
 </div>
-<%= render "shared/footer" %>

@@ -8,23 +8,40 @@
         <%= link_to 'HealthLunch', root_path, method: :get, class: "healthLunch"%>
       </div>
     </div>
-    <div class='nav'>
-      <ul class='lists-left'>
-        <li><%=link_to 'ご利用ガイド', '#', class: "guide" %><li>
-        <li><%=link_to 'よくある質問', '#', class: "question-title" %></li>
-      </ul>
-      <ul class='lists-right'>
-        <% if user_signed_in? %>
-          <li><%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout"%></li>
-        <% else %>
-          <li><%=link_to 'ログイン', new_user_session_path, class: "login" %></li>
-          <li><%=link_to '新規登録', new_user_registration_path, class: "sign_up"%></li>
-        <% end %>
-      </ul>
+      <div class="cp_cont">
+	      <div class="cp_offcm04">
+          <input type="checkbox" id="cp_toggle04">
+          <label for="cp_toggle04"><span></span></label>
+          <div class="cp_menu">
+          <ul >
+          <% if user_signed_in? %>
+           <li><%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout"%></li>
+          <% else %>
+           <li><%=link_to 'ログイン', new_user_session_path, class: "login" %></li>
+           <li><%=link_to '新規登録', new_user_registration_path, class: "sign_up"%></li>
+          <% end %>
+            <li><%= link_to 'たんぱくケア', proteins_path  %></li>
+            <li><%= link_to 'カロリーケア', "#" %></li>
+            <li><%= link_to 'やわらか食事', softs_path %></li>
+            <li><%= link_to 'よくある質問', "#" %></li>
+            <li><%= link_to 'トップページへ戻る', root_path %></li>
+            <% if user_signed_in? %>
+              <% if current_user == @user || current_user.admin? %>
+                <li class='admin'><%= link_to '商品の登録', new_protein_path %></li>
+              <% end %>
+            <% end %>
+            <% if user_signed_in? %>
+              <% if current_user == @user || current_user.admin? %>
+                <li class='admin'><%= link_to 'やわらか商品登録', new_soft_path %></li>
+              <% end %>
+            <% end %>
+          </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <div class='bar-contents'>
-      <p class='title-header'>栄養バランスの取れたお弁当です。</p>
+      <p class='title-header'></p>
     </div>
-  </div>
 </header>
 

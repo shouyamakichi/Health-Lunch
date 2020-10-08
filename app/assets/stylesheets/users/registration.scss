@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-around;
   margin-right: 10%;
-  margin-top: 10%;
+  margin-top: 3%;
   padding: 50px 40px ;
   background-color: white;
   border: 1px solid black;
@@ -28,7 +28,7 @@
 
 .form-header{
   margin-left: 10%;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 .form-header-text{
@@ -45,8 +45,8 @@
 
 .input-default{
   width: 20vw;
-  box-shadow: 0 0 7px green;
-  border: 1px solid green;
+  height: 5vh;
+  border: 1px solid gray;
   margin-bottom: 20px;
   border-radius: 5px;
 }
@@ -55,8 +55,7 @@
 
 .input-name{
   text-align: center;
-  box-shadow: 0 0 7px green;
-  border: 1px solid green;
+  border: 1px solid gray;
   border-radius: 10px;
   margin-bottom: 10px;
   line-height: 1.2;
@@ -82,6 +81,51 @@
   color: #fff;
 }
 
+
+@media (max-width: 599px){
+  
+  
+  .form-wrap{
+    display: block;
+    background-image: image-url("image1.jpg");
+    background-color:rgba(255,255,255,0.5);
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .second-wrapper{
+    text-align: center;
+  }
+  
+  .error{
+    
+    padding-left: 75px;
+    margin-bottom: 10px;
+  }
+
+  .form-wrapper{
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .form-header{
+    margin-top: -3%;
+  }
+
+  .form-header-text{
+  }
+
+  .input-default{
+    width: 90%;
+  }
+
+  .register-btn{
+    padding-bottom: -5px;
+  }
+
+
+}
 
 
 

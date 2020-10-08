@@ -4,7 +4,8 @@
 // Topの画像編集
 .title-contents{
   width :100vw;
-  background-image: image-url('bento11.jpg');
+  height: 550px;
+  background-image: image-url('eiyousi.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -14,7 +15,7 @@
   justify-content: center;
   padding: 5vh 15vw;
   color: #fff;
-  text-shadow: 1px 2px 3px black;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
 .advertising{
@@ -37,7 +38,13 @@
 
 .title{
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
+  text-shadow: 1px 2px 3px black;
+  font-style: italic;
+  letter-spacing:0.1em;
+  border-bottom: 1px solid gray;
+  border-width: 0.1em;
+  padding-bottom: 20px;
 }
 
 .bento-lists{
@@ -47,7 +54,7 @@
 }
 
 .list{
-  width: 33vh;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,19 +63,23 @@
 
 .list-pict {
   margin-bottom: 20px;
-  width: 100%;
   border-radius: 10px;
+  opacity: 0.9;
 }
 
 .bento-list-text{
   font-size: 30px;
   position: absolute;
+  text-shadow: 1px 2px 3px black;
+  color: white;
+  font-style: initial;
 }
 
 .bento-list-title{
   font-weight: bold;
   font-size: 15px;
   line-height: 50px;
+  
 }
 
 .bento-list-explain{
@@ -80,41 +91,46 @@
 // 選ばれる理由
 .feature-contents{
   background-image: image-url('btn11.jpg');
-  width: 100vw;
-  height: 80vh;
+  background-color: rgba(255, 255, 255, 0.3);
   background-size: cover;
   background-blend-mode: lighten;
   background-position: center;
-  background-color:rgba(255,255,255,0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: white;
+  width: 100%;
+  height: 600px;
+  color:#A7F1FF;
+  opacity: 0.9;
   text-shadow: 1px 2px 3px black;
   font-style: italic;
 }
 
+
+
 .second-health-title{
-  font-size: 40px;
+  font-size: 50px;
+  margin-bottom: 40px;
+  padding-top:60px;
+  text-align: center;
 }
 
 .textArea{
+  margin-bottom: 80px;
 }
 
 .discBox{
   margin-bottom: 40px;
+  margin-top: 45px;
+  padding-left: 50px;
 }
 
-.menu{
-  font-size: 35px;
+.menu-acount{
+  font-size: 40px;
+  padding-bottom: 20px;
 }
 
 .acount{
-  font-size: 20px;
+  font-size: 25px;
+  margin-bottom: 80px;
 }
-
 
 .star-rating{
   position: relative;
@@ -144,8 +160,54 @@
 }
 
 
+// スマホ対応時
+@media (max-width: 599px){
+  .main{
+  
+  }
+
+  .advertising{
+    font-size: 50px;
+  }
+
+  .picture-contents{
+    font-size: 40px;
+  }
+
+  .bento-lists{
+    width: 100%;
+  }
+
+  .bento-list-text{
+    font-size: 20px;
+  }
+
+  .bentos-lists{
+  }
+
+  .list-pict{
+    width: 400px;
+  }
+
+  .bento-list-title{
+    font-size: 10px;
+  }
+
+  .bento-list-explain{
+    font-size: 10px;
+  }
+
+  .second-health-title{
+    font-size:40px;
+  }
+
+  .menu-acount{
+    font-size: 30px;
+  }
+
+  .acount{
+    font-size: 15px;
+  }
 
 
-
-
-
+}

@@ -10,7 +10,6 @@
     <div class="img-upload">
       <div class="weight-bold-text">
         出品画像
-        <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
         <p>
@@ -22,27 +21,17 @@
     <div class="new-items">
       <div class="weight-bold-text">
         商品名
-        <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
-      <div class="items-explain">
-        <div class="weight-bold-text">
-          商品の説明
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.text_area :acount, class:"items-text", id:"item-info" %>
-      </div>
     </div>
     <div class="sell-price">
       <div class="weight-bold-text question-text">
         <span>販売価格</span>
-        <a class="question" href="#">?</a>
       </div>
       <div>
         <div class="price-content">
           <div class="price-text">
             <span>価格</span>
-            <span class="indispensable">必須</span>
           </div>
           <span class="sell-yen">¥</span>
           <%= f.text_field :price, class:"price-input", id:"item-price" %>
@@ -61,12 +50,12 @@
         </span>
       </div>
     </div>
-     <div class="price-content">
+        <div class="price-content">
           <div class="price-text">
             <span>エネルギー</span>
           </div>
           <%= f.text_field :energy, class:"price-input" %>
-      </div>
+        </div>
         <div class="price-content">
           <div class="price-text">
             <span>たんぱく質</span>

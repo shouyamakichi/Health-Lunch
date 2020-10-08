@@ -1,48 +1,34 @@
 <%= render "shared/header" %>
 
 <div class='main-contents'>
-  <div class='main-pic'>
-    <%= image_tag "sumaho.jpg", class: "item-contents"%>
-  </div>
-  <div class='category-item'>
-    <h2 class='title'>やわらかメニュー<h2>
-  </div>
-  <div class='menu-categoy'>
-    <ul class='item-menu'>
-      <li class='menu'>
-       <%= image_tag "bento4.jpg", class: "bento-contents"%>
-        <div class="item-info">
-          <h3 class='item-name'>
-            弁当名
-          <h3>
-          <div class='item-price'>
-            <span class='price'>500円</span>
-          </div>
-        </div> 
-      </li>
-      <li class='menu'>
-        <%= image_tag "bento4.jpg", class: "bento-contents" %>
-          <div class="item-info">
-          <h3 class='item-name'>
-            弁当名
-          <h3>
-          <div class='item-price'>
-            <span class='price'>500円</span>
-          </div>
-        </div> 
-      </li>
-      <li class='menu'>
-       <%= image_tag "bento4.jpg", class: "bento-contents" %>
-        <div class="item-info">
-          <h3 class='item-name'>
-            弁当名
-          <h3>
-          <div class='item-price'>
-            <span class='price'>500円</span>
-          </div>
-        </div> 
-      </li>
-    </ul>
+  <div class='bento-menu'>
+    <div class='main-pic'>
+      <div class='pic'>
+        <p class='pic-contents'>1食あたりのたんぱく質量が13ｇ程度、塩分2.0ｇ、カリウム500ｍｇ、リン270mg以下に抑えた食事</p>
+      </div>
+    </div>
+    <div class='main-menu'>
+      <div class='category-item'>
+        <h2 class='title-protein'>やわらか食事メニュー<h2>
+      </div>
+      <div class='menu-category'>
+        <ul class='category-menu'>
+          <% @softs.each do |soft| %>
+          <li class='menu'>
+            <%= link_to soft_path(soft.id), class: 'link' do%>
+              <%= image_tag soft.image, class: 'bento-contents' if soft.image.attached? %>
+              <div class="item-info">
+                <h3 class='item-name'><%= soft.name %><h3>
+                <div class='item-price'>
+                  <span class='price'><%= soft.price %>円(税抜)</span>
+                </div>
+              </div>
+            <% end %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
-<%= render "shared/footer" %>
+
