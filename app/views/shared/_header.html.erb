@@ -15,6 +15,7 @@
           <div class="cp_menu">
           <ul >
           <% if user_signed_in? %>
+           <div class='first_name'><%= "#{current_user.first_name}" %><%="#{current_user.last_name}" %>のマイページ</div>
            <li><%=link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout"%></li>
           <% else %>
            <li><%=link_to 'ログイン', new_user_session_path, class: "login" %></li>

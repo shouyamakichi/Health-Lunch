@@ -25,6 +25,9 @@
             <div class='login-btn'>
               <%= f.submit "ログイン" ,class:"login-red-btn" %>
             </div>
+            <div class='facebook-new'>
+              <%= link_to 'Facebookでログインの方はこちら', user_facebook_omniauth_authorize_path, method: :post%>
+            </div>
           </div>
         </div>
       </div>
