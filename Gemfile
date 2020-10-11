@@ -63,3 +63,5 @@ gem 'ratyrate'
 gem 'bulma-rails'
 gem 'font-awesome-sass'
 gem 'font-awesome-rails'
+gem 'omniauth-facebook'
+gem "omniauth-rails_csrf_protection"
