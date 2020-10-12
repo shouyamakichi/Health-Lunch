@@ -65,3 +65,6 @@ gem 'font-awesome-sass'
 gem 'font-awesome-rails'
 gem 'omniauth-facebook'
 gem "omniauth-rails_csrf_protection"
+group :production do
+  gem 'rails_12factor'
+end
