@@ -116,10 +116,6 @@
   margin-bottom: 60px;
 }
 
-.eiyou-content{
-
-}
-
 .eiyou-text{
   font-size: 20px;
 }
@@ -158,5 +154,46 @@
   text-decoration: none;
 }
 
+@media (max-width: 599px) {
+  .items-sell-contents{
+    display: block;
+    width: 100%;
+  }
 
+  .new-contents{
+    margin-bottom: -50px;
+  }
+
+  .menus-proteins-contents{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contents-protein{
+    display: block;
+  }
+
+  .only-menu{
+    display: none;
+  }
+
+  .protein-menus{
+    display: block;
+    margin-top: 90px;
+  }
+
+  .price-input{
+    margin-bottom: 40px;
+  }
+
+  .menus-contents{
+    margin-bottom: 30px;
+    margin-top: 28px;
+  }
+
+  .sell-btn-contents{
+    text-align: center;
+    margin-left: 80px;
+  }
+}
 
