@@ -42,60 +42,64 @@
           </div>
         </div>
       </div>
-        <div class='contents-protein'>
-          <div class="eiyou-content">
+        <div class='menus-proteins-contents'>
+          <div class='contents-protein'>
+            <div class="eiyou-content">
+                <div class="eiyou-text">
+                  <span>エネルギー</span>
+                </div>
+                <%= f.text_field :energy, class:"price-input" %>
+            </div>
+            <div class="eiyou-content">
               <div class="eiyou-text">
-                <span>エネルギー</span>
+                <span>たんぱく質</span>
               </div>
-              <%= f.text_field :energy, class:"price-input" %>
-          </div>
-          <div class="eiyou-content">
-            <div class="eiyou-text">
-              <span>たんぱく質</span>
+              <%= f.text_field :prote, class:"price-input" %>
             </div>
-            <%= f.text_field :prote, class:"price-input" %>
-          </div>
-          <div class="eiyou-content">
-            <div class="eiyou-text">
-              <span>脂質</span>
+            <div class="eiyou-content">
+              <div class="eiyou-text">
+                <span>脂質</span>
+              </div>
+              <%= f.text_field :Lipid, class:"price-input" %>
             </div>
-            <%= f.text_field :Lipid, class:"price-input" %>
-          </div>
-          <div class="eiyou-content">
-            <div class="eiyou-text">
-              <span>塩分</span>
+            <div class="eiyou-content">
+              <div class="eiyou-text">
+                <span>塩分</span>
+              </div>
+              <%= f.text_field :salt, class:"price-input" %>
             </div>
-            <%= f.text_field :salt, class:"price-input" %>
-          </div>
-          <div class="eiyou-content">
-            <div class="eiyou-text">
-              <span>炭水化物</span>
+            <div class="eiyou-content">
+              <div class="eiyou-text">
+                <span>炭水化物</span>
+              </div>
+              <%= f.text_field :carbo, class:"price-input" %>
             </div>
-            <%= f.text_field :carbo, class:"price-input" %>
           </div>
-        </div>
-        <div class="bento-menu-text">
-          <div class='only-menu'>メニュー</div>
-        </div>
-        <div class='protein-menus'>
-          <div class="menus-contents">
-            <%= f.text_field :first, class:"price-input" %>
-          </div>
-          <div class="menus-contents">
-            <%= f.text_field :second, class:"price-input" %>
-          </div>
-          <div class="menus-contents">
-            <%= f.text_field :third, class:"price-input" %>
-          </div>
-          <div class="menus-contents">
-            <%= f.text_field :forth, class:"price-input" %>
-          </div>
-          <div class="menus-contents">
-            <%= f.text_field :fifth, class:"price-input" %>
+          <div class='bento-text-menu'>
+            <div class="bento-menu-text">
+              <div class='only-menu'>メニュー</div>
+            </div>
+            <div class='protein-menus'>
+              <div class="menus-contents">
+                <%= f.text_field :first, class:"price-input" %>
+              </div>
+              <div class="menus-contents">
+                <%= f.text_field :second, class:"price-input" %>
+              </div>
+              <div class="menus-contents">
+                <%= f.text_field :third, class:"price-input" %>
+              </div>
+              <div class="menus-contents">
+                <%= f.text_field :forth, class:"price-input" %>
+              </div>
+              <div class="menus-contents">
+                <%= f.text_field :fifth, class:"price-input" %>
+              </div>
+            </div>
           </div>
         </div>
     <div class="sell-btn-contents">
-      <%= f.submit "やわらかメニュー" ,class:"sell-btn" %>
+      <%= f.submit "やわらか食事" ,class:"sell-btn" %>
     </div>
     <div class="sell-btn-contents"> 
       <%=link_to 'もどる', root_path, class:"back-btn" %>

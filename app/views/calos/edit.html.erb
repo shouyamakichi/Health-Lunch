@@ -7,114 +7,101 @@
     <h2 class="items-sell-title">商品の情報を入力</h2>
     <%= form_with model: @calo, local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %> 
-    <div class="img-upload">
-      <div class="weight-bold-text">
-        出品画像
+    <div class='new-contents'>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          弁当画像
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"item-image" %> 
+        </div>
       </div>
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"item-image" %> 
+      <div class="new-items">
+        <div class="weight-bold-text">
+          弁当名
+        </div>
+        <%= f.text_area :name, class:"items-text", id:"item-name" %>
       </div>
-    </div>
-    <div class="new-items">
-      <div class="weight-bold-text">
-        商品名
+      <div class="sell-price">
+        <div class="weight-bold-text question-text">
+        </div>
+        <div>
+          <div class="price-content">
+            <div class="price-text">
+              <span>価格</span>
+            </div>
+            <span class="sell-yen">¥</span>
+            <%= f.text_field :price, class:"price-input", id:"item-price" %>
+          </div>
+          <div class="price-content">
+            <span>販売価格（税込み）</span>
+            <span>
+              <span id='add-tax-price'></span>円
+            </span>
+          </div>
+        </div>
       </div>
-      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
-    </div>
-    <div class="sell-price">
-      <div class="weight-bold-text question-text">
-        <span>販売価格</span>
-      </div>
-      <div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>価格</span>
+        <div class='contents-protein'>
+          <div class="eiyou-content">
+              <div class="eiyou-text">
+                <span>エネルギー</span>
+              </div>
+              <%= f.text_field :energy, class:"price-input" %>
           </div>
-          <span class="sell-yen">¥</span>
-          <%= f.text_field :price, class:"price-input", id:"item-price" %>
-        </div>
-        <div class="price-content">
-          <span>配送料</span>
-          <span>
-            <span id='add-tax-price'></span>円
-          </span>
-        </div>
-        <div class="price-content">
-          <span>販売価格(税込み)</span>
-          <span>
-            <span id='profit'></span>円
-        </div>
-        </span>
-      </div>
-    </div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>エネルギー</span>
+          <div class="eiyou-content">
+            <div class="eiyou-text">
+              <span>たんぱく質</span>
+            </div>
+            <%= f.text_field :prote, class:"price-input" %>
           </div>
-          <%= f.text_field :energy, class:"price-input" %>
-        </div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>たんぱく質</span>
+          <div class="eiyou-content">
+            <div class="eiyou-text">
+              <span>脂質</span>
+            </div>
+            <%= f.text_field :Lipid, class:"price-input" %>
           </div>
-          <%= f.text_field :prote, class:"price-input" %>
-        </div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>脂質</span>
+          <div class="eiyou-content">
+            <div class="eiyou-text">
+              <span>塩分</span>
+            </div>
+            <%= f.text_field :salt, class:"price-input" %>
           </div>
-          <%= f.text_field :Lipid, class:"price-input" %>
-        </div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>塩分</span>
+          <div class="eiyou-content">
+            <div class="eiyou-text">
+              <span>炭水化物</span>
+            </div>
+            <%= f.text_field :carbo, class:"price-input" %>
           </div>
-          <%= f.text_field :salt, class:"price-input" %>
         </div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>炭水化物</span>
-          </div>
-          <%= f.text_field :carbo, class:"price-input" %>
+        <div class="bento-menu-text">
+          <div class='only-menu'>メニュー</div>
         </div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>メニュー</span>
+        <div class='protein-menus'>
+          <div class="menus-contents">
+            <%= f.text_field :first, class:"price-input" %>
           </div>
-          <%= f.text_field :first, class:"price-input" %>
-        </div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>メニュー</span>
+          <div class="menus-contents">
+            <%= f.text_field :second, class:"price-input" %>
           </div>
-          <%= f.text_field :second, class:"price-input" %>
-        </div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>メニュー</span>
+          <div class="menus-contents">
+            <%= f.text_field :third, class:"price-input" %>
           </div>
-          <%= f.text_field :third, class:"price-input" %>
-        </div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>メニュー</span>
+          <div class="menus-contents">
+            <%= f.text_field :forth, class:"price-input" %>
           </div>
-          <%= f.text_field :forth, class:"price-input" %>
-        </div>
-        <div class="price-content">
-          <div class="price-text">
-            <span>メニュー</span>
+          <div class="menus-contents">
+            <%= f.text_field :fifth, class:"price-input" %>
           </div>
-          <%= f.text_field :fifth, class:"price-input" %>
         </div>
     <div class="sell-btn-contents">
       <%= f.submit "カロリーケア" ,class:"sell-btn" %>
     </div>
     <div class="sell-btn-contents"> 
-      <%=link_to 'もどる', calo_path, class:"back-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
     </div>
     <% end %>
   </div>
