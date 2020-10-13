@@ -139,7 +139,7 @@
   border-radius: 1em;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 479px) {
 
   .bento-price{
     margin-top: -20px;
