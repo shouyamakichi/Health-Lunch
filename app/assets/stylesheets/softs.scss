@@ -97,12 +97,50 @@
   margin-left: 20px;
 }
 
-@media (max-width: 599px) {
-  .bento-contents{
-    width: 200px;
-    margin-right: 60px;
-    margin-top: -80px;
+@media (max-width: 479px) {
+  .main-contents{
+    background-color: #FFFFEE;
   }
+
+  .bento-contents{
+    width: 130px;
+    height: 100px;
+  }
+
+  .category-item{
+    margin-right: 20px;
+  }
+
+  .main-menu{
+    margin-left: 30px;
+  }
+
+  .category-menu {
+    margin-left: 15px;
+  }
+
+  .title-protein{
+    font-size: 30px;
+  }
+
+  .picture{
+    height: 300px;
+    width: 100%;
+  }
+
+  .pic-text{
+    font-size: 21px;
+  }
+
+  .item-name{
+    font-size: 20px;
+  }
+
+  .item-price{
+    font-size: 10px;
+  }
+
+
 
   
 }
