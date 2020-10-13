@@ -97,12 +97,12 @@
   margin-left: 20px;
 }
 
-@media (max-width: 599px) {
-  .bento-contents{
-    width: 200px;
-    margin-right: 60px;
-    margin-top: -80px;
+@media (max-width: 479px) {
+  .contents-pic{
+    height: 300px;
+    width: 100%;
   }
+  
 
   
 }
