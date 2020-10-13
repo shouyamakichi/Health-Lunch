@@ -86,9 +86,7 @@
 }
 
 
-@media (max-width: 599px){
-  
-  
+@media (max-width: 479px){
   .form-wrap{
     display: block;
     background-image: image-url("image1.jpg");
@@ -98,18 +96,27 @@
     background-position: center;
   }
 
+  .new-text{
+    margin-left: -40px;
+  }
+
+  .new-facebook{
+    margin-left: 30px;
+    margin-top: -20px;
+  }
+
   .second-wrapper{
     text-align: center;
   }
   
   .error{
-    
     padding-left: 75px;
     margin-bottom: 10px;
   }
 
   .form-wrapper{
-    width: 60%;
+    width: 90%;
+    height: 600px;
     margin: 0 auto;
   }
 
@@ -117,17 +124,25 @@
     margin-top: -3%;
   }
 
+  .input-name-wrap{
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .form-text{
+    margin-top: 10px;
+  }
+
+  .form-text-wrap{
+    margin-top: 20px;
+  }
+
+  .input-name{
+    width: 50%;
+    margin-right: 10px;
+  }
 
   .input-default{
     width: 90%;
   }
-
-  .register-btn{
-    padding-bottom: -5px;
-  }
-
-
 }
-
-
-
