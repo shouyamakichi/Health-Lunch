@@ -161,11 +161,7 @@
 
 
 // スマホ対応時
-@media (max-width: 599px){
-  .main{
-  
-  }
-
+@media (max-width: 479px){
   .advertising{
     font-size: 50px;
   }
@@ -174,8 +170,8 @@
     font-size: 40px;
   }
 
-  .bento-lists{
-    width: 100%;
+  .bentos-lists{
+    display: block;
   }
 
   .bento-list-text{
