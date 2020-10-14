@@ -142,12 +142,19 @@
 @media (max-width: 479px) {
 
   .bento-price{
-    margin-top: -20px;
-    margin-left: 80px;
+    margin: 0 auto;
+  }
+
+  .price-bento{
+    padding: 0;
   }
 
   .show-image-contents{
     display: block;
+  }
+
+  .top-right{
+    display: flex;
   }
 
   .contents-nut{
@@ -156,5 +163,35 @@
 
   .nut-lists{
     text-align: center;
+  }
+
+  .image-top{
+    margin-top: 20px;
+  }
+
+  .food{
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .center-right{
+    display: block;
+    padding-top: 30px;
+  }
+
+  .item-blue-btn{
+    font-size: 25px;
+    margin-left: 20px;
+  }
+
+  .btn-red{
+    margin-top: 40px; 
+    margin-left: 20px;
+    font-size: 20px;   
+  }
+
+  .btn-green{
+    font-size: 20px;
+    margin-left: -20px;
   }
 }
