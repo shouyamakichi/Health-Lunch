@@ -154,19 +154,33 @@
   text-decoration: none;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 479px) {
   .items-sell-contents{
     display: block;
     width: 100%;
   }
 
+  .items-sell-title{
+    margin-bottom: 5px;
+  }
+
   .new-contents{
     margin-bottom: -50px;
+    padding: 0;
+  }
+
+  .click-upload{
+    margin-left: 100px;
   }
 
   .menus-proteins-contents{
     display: flex;
     justify-content: space-between;
+    margin-left: 20px;
+  }
+
+  .new-items{
+    margin-right: 20px;
   }
 
   .contents-protein{
@@ -182,18 +196,36 @@
     margin-top: 90px;
   }
 
-  .price-input{
-    margin-bottom: 40px;
-  }
-
   .menus-contents{
     margin-bottom: 30px;
     margin-top: 28px;
   }
 
+  .sell-yen{
+    margin-right: 10px;
+  }
+
+  .price-text{
+    margin-right: 40px;
+  }
+
+  .price-content{
+    margin-left: 50px;
+  }
+
+  .price-input{
+    padding-left: 40px;
+    width: 80%;
+  }
+
+  .sell-btn{
+    margin-bottom: 20px;
+  }
+
   .sell-btn-contents{
     text-align: center;
     margin-left: 80px;
+    padding-bottom: 40px;
   }
 }
 
