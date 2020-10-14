@@ -171,24 +171,26 @@
 }
 
 // スマホレイアウト
-@media (max-width: 599px) {
+@media (max-width: 4999px) {
 .buyer-second-contents{
   display: block;
 }
 
+
 .buy{
-  margin-left: 70px;
+  margin-left: 40px;
 }
 
 .buy-item-img{
+  height: 250px;
+  width: 270px;
   margin-left: 50px;
-  height: 300px;
 }
 
 .buyer-bento-name{
   font-size: 30px;
-  padding-left: 30vw;
   border-bottom: none;
+  margin-left: 100px;
 }
 
 .name-price{
@@ -196,22 +198,28 @@
 }
 
 .buyer-bento-price{
-  padding-left: 30vw;
+  padding-left: 20vw;
   border-bottom: none; 
   font-size: 25px;
 }
 
+
 .buyers-con{
-  display: flex;
-  align-items: center;
-  margin-left: 90px;
   margin-top: 40px;
+  width: 90vw;
+  margin-left: 20px;
 }
 
 .buyer-btn{
   width: 500px;
-  margin-left: 40px;
+  margin-left: -55px;
   margin-bottom: -100px;
   padding-bottom: 80px;
 }
+
+.input{
+  padding: 40px;
+}
+
+
 }
