@@ -67,6 +67,7 @@
   z-index    : 11;
 }
 
+
 .buyer-title{
   text-align: center;
   margin-top: 70px;
@@ -171,7 +172,7 @@
 }
 
 // スマホレイアウト
-@media (max-width: 4999px) {
+@media (max-width: 479px) {
 .buyer-second-contents{
   display: block;
 }
