@@ -5,8 +5,8 @@ class Protein < ApplicationRecord
 
   with_options presence:true do
     validates :image
-    validates :name
-    validates :price, format: { with: /\A[0-9]+\z/ }
+    validates :name, format: { with: /\A[ぁ-んァ-ン一-龥]/}
+    validates :price, format: { with: /\A[0-9]+\z/i },numericality: { only_integer: true}
   end
   
   with_options presence: true, format: { with: /\A[-]?[0-9]+(\.[0-9]+)?\z/ } do
