@@ -2,7 +2,7 @@
 
 <img src="gyazo.jpg" width="100%" height="400px">
 
-# 概要(h1)
+# 概要
 
 ## users テーブル
 
