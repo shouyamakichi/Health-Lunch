@@ -23,6 +23,8 @@ https://health-lunch.herokuapp.com/
 # 特徴
 １　トップページ
 
+<img src="gyazo.jpg2" width="100%" height="400px">
+
 
 
 
