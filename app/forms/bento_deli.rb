@@ -4,7 +4,7 @@ class BentoDeli
   attr_accessor :zip01, :pref01, :addr01, :reference, :building, :phone_number, :user_id, :calo_id, :token
 
   with_options presence:true do
-    validates :zip01
+    validates :zip01, format: { with: /\A\d{3}[-]\d{4}\z/}
     validates :reference
     validates :phone_number, format: { with: /\A\d{11}\z/}
     validates :token
