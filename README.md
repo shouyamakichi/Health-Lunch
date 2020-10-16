@@ -24,7 +24,8 @@ https://health-lunch.herokuapp.com/
 １　トップページ
 
 <img src="gyazo2.jpg" width="100%" height="400px">
-<ima src="gyazo3.jpg" width="100%" height="400px">
+
+<img src="gyazo3.jpg" width="100%" height="400px">
 
 
 
