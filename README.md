@@ -1,5 +1,7 @@
 # README
 
+![サンプル画像](bnt17.jpg)
+
 ## users テーブル
 
 | Column              | Type   | Options     |
