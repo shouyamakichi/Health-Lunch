@@ -1,6 +1,6 @@
 # README
 
-<img src="bnt17.jpg" width="80%">
+<img src="bnt17.jpg" width="800px">
 
 ## users テーブル
 
