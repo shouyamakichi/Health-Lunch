@@ -10,7 +10,11 @@
 .レーティング機能
 .管理者機能
 
-# 本番環境
+
+
+# アプリURL
+https://health-lunch.herokuapp.com/
+
 
 
 ## users テーブル
