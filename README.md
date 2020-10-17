@@ -82,6 +82,7 @@ has_many reviwes
 
 
 ## protein テーブル
+| Column             | Type   | Options     |
 |--------------------| ------ | ----------- |
 | name               | string | null: false |
 | acount             | string | null: false |
