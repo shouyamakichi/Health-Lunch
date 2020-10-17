@@ -99,6 +99,7 @@ belongs_to protein
 
 
 ## soft テーブル
+| Column              | Type   | Options     |
 | --------------------| ------ | ----------- |
 | name                | string | null: false |
 | acount              | string | null: false |
@@ -115,6 +116,7 @@ belongs_to soft
 
 
 ## calo テーブル
+| Column             | Type   | Options     |
 |--------------------| ------ | ----------- |
 | name               | string | null: false |
 | acount             | string | null: false |
@@ -131,7 +133,9 @@ belongs_to calo
 
 
 ## buyer テーブル
-|--------------------------------|-----------------------|
+
+| Column            | Type       | Options                       |
+|--------------------------------|-------------------------------|
 | user_id           | integer    | null: false, foreign_key: true|
 | protein_id        | integer    | null: false, foreign_key: true|
 
@@ -142,12 +146,12 @@ has_one delivery
 
 ## bento テーブル
 
+| Column         | Type    | Options                       |
 |----------------|---------|-------------------------------|
 | user_id        | integer | null: false, foreign_key: true|
 | calo_id        | integer | null: false, foreign_key: true|
-=======
-| user_id           | integer | null: false, foreign_key: true|
-| calo_id           | integer | null: false, foreign_key: true|
+| user_id        | integer | null: false, foreign_key: true|
+| calo_id        | integer | null: false, foreign_key: true|
 
 
 association
@@ -158,11 +162,12 @@ has_one deli
 
 ## shohin テーブル
 
+| Column         | Type    | Options                       |
 |----------------|---------|-------------------------------|
 | user_id        | integer | null: false, foreign_key: true|
 | soft_id        | integer | null: false, foreign_key: true|
-| user_id           | integer | null: false, foreign_key: true|
-| soft_id           | integer | null: false, foreign_key: true|
+| user_id        | integer | null: false, foreign_key: true|
+| soft_id        | integer | null: false, foreign_key: true|
 
 
 association
@@ -171,10 +176,11 @@ belongs_to user
 has_one add
 
 ## delivery テーブル
+| Column        | Type       | Options                        |
 |---------------|------------|--------------------------------|
 | buyer_id      | integer    | null: false, foreign_key: true |
 | zip           | string     | null: false                    |
-|region＿id     | integer    | null: false                    |
+| region_id     | integer    | null: false                    |
 | city          | string     | null: false                    |
 | reference     | string     | null: false                    |
 | building      | string     |                                |
@@ -185,10 +191,11 @@ has_one buyer
 
 ## deli テーブル
 
+| Column        | Type       | Options                        |
 |---------------|------------|--------------------------------|
 | calo_id       | integer    | null: false, foreign_key: true |
 | zip           | string     | null: false                    |
-|region＿id      | integer    | null: false                    |
+| region_id     | integer    | null: false                    |
 | city          | string     | null: false                    |
 | reference     | string     | null: false                    |
 | building      | string     |                                |
@@ -200,14 +207,11 @@ has_one bento
 
 ## add テーブル
 
+| Column        | Type       | Options                        |
 |---------------|------------|--------------------------------|
 | soft_id       | integer    | null: false, foreign_key: true |
 | zip           | string     | null: false                    |
-| region＿id    | integer    | null: false                    |
-=======
-| soft_id       | integer    | null: false, foreign_key: true |
-| zip           | string     | null: false                    |
-|region＿id      | integer    | null: false                    |
+| region_id     | integer    | null: false                    |
 | city          | string     | null: false                    |
 | reference     | string     | null: false                    |
 | building      | string     |                                |
@@ -217,6 +221,8 @@ association
 has_one shohin
 
 ## review テーブル
+
+| Column     | Type        | Options                        |
 |------------|-------------|--------------------------------|
 | user_id    |integer      | null: false, foreign_key: true |
 | item_id    |integer      | null: false. foreign_key: true |
