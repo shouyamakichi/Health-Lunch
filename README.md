@@ -39,7 +39,7 @@ https://health-lunch.herokuapp.com/
 <img src="gyazo6.png" width="100%" height="400px">
 
 5 レビュー機能   
-<img src="Videotogif.gif"> 
+<img src="Videotogif.gif" width="100%" height="400px"> 
 <img src="gyazo9.jpg" width="100%" height="400px">                           
 
 
