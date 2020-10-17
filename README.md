@@ -27,7 +27,8 @@ https://health-lunch.herokuapp.com/
 <img src="gyazo3.jpg" width="100%" height="400px">
 
 
-
+2 新規登録画面
+<img src="gyazo4.jpg" width="100%" height="400px">
 
 
 ## users テーブル
