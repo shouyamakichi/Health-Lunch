@@ -70,9 +70,9 @@ Ruby RubyonRails Javascript Heroku
 | first_name_kana     | string | null: false |
 
 association
-<br>has_many: items</br>
-<br>has_many: buyers</br>
-<br>has_many: reviwes</br>
+<br>has_many :items</br>
+<br>has_many :buyers</br>
+<br>has_many :reviwes</br>
 
 ## items テーブル
 
@@ -81,7 +81,7 @@ association
 | name                | string | null: false |
 
 associaiton
-<br>belongs_to: user</br>
+<br>belongs_to :user</br>
 
 
 ## protein テーブル
@@ -98,8 +98,8 @@ associaiton
 | carbo              | string | null: false |
 
 association 
-<br>has_many: users</br>
-<br>belongs_to: protein</br>
+<br>has_many :users</br>
+<br>belongs_to :protein</br>
 
 
 ## soft テーブル
@@ -115,8 +115,8 @@ association
 | carbo               | string | null: false |
 
 association 
-<br>has_many: users</br>
-<br>belongs_to: soft</br>
+<br>has_many :users</br>
+<br>belongs_to :soft</br>
 
 
 ## calo テーブル
@@ -133,8 +133,8 @@ association
 | carbo              | string | null: false |
 
 association 
-<br>has_many: users</br>
-<br>belongs_to: calo</br>
+<br>has_many :users</br>
+<br>belongs_to :calo</br>
 
 
 ## buyer テーブル
@@ -145,9 +145,9 @@ association
 | protein_id        | integer    | null: false, foreign_key: true|
 
 association
-<br>belongs_to:  protein
-<br>belongs_to: user
-<br>has_one: delivery
+<br>belongs_to :protein
+<br>belongs_to :user
+<br>has_one :delivery
 
 ## bento テーブル
 
@@ -160,9 +160,9 @@ association
 
 
 association
-belongs_to  calo
-belongs_to user
-has_one deli
+<br>belongs_to :calo
+<br>belongs_to :user
+<br>has_one: :deli
 
 
 ## shohin テーブル
@@ -176,9 +176,9 @@ has_one deli
 
 
 association
-belongs_to  soft
-belongs_to user
-has_one add
+<br>belongs_to :soft
+<br>belongs_to :user
+<br>has_one :add
 
 ## delivery テーブル
 
@@ -193,7 +193,7 @@ has_one add
 | phone_number  | string     | null: false                    |
 
 association
-has_one buyer
+<br>has_one :buyer
 
 ## deli テーブル
 
@@ -208,7 +208,7 @@ has_one buyer
 | phone_number  | string     | null: false                    |
 
 association
-has_one bento
+<br>has_one :bento
 
 
 ## add テーブル
@@ -224,7 +224,7 @@ has_one bento
 | phone_number  | string     | null: false                    |
 
 association
-has_one shohin
+<br>has_one :shohin
 
 ## review テーブル
 
@@ -236,4 +236,4 @@ has_one shohin
 | content    |string       | null: false                    |
 
 association
-belongs_to :user
+<br>belongs_to :user
