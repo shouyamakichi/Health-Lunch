@@ -86,9 +86,9 @@ has_many reviwes
 | name               | string | null: false |
 | acount             | string | null: false |
 | price              | string | null: false |
-| energy            | string | null: false |
-| prote             | string | null: false |
-| salt              | string | null: false |
+| energy             | string | null: false |
+| prote              | string | null: false |
+| salt               | string | null: false |
 | Lipid              | string | null: false |
 | carbo              | string | null: false |
 
@@ -118,9 +118,9 @@ belongs_to soft
 | name               | string | null: false |
 | acount             | string | null: false |
 | price              | string | null: false |
-| energy            | string | null: false |
-| prote             | string | null: false |
-| salt              | string | null: false |
+| energy             | string | null: false |
+| prote              | string | null: false |
+| salt               | string | null: false |
 | Lipid              | string | null: false |
 | carbo              | string | null: false |
 
@@ -140,7 +140,7 @@ has_one delivery
 
 ## bento テーブル
 | user_id           | integer | null: false, foreign_key: true|
-| calo_id        | integer | null: false, foreign_key: true|
+| calo_id           | integer | null: false, foreign_key: true|
 
 association
 belongs_to  calo
@@ -150,7 +150,7 @@ has_one deli
 
 ## shohin テーブル
 | user_id           | integer | null: false, foreign_key: true|
-| soft_id        | integer | null: false, foreign_key: true|
+| soft_id           | integer | null: false, foreign_key: true|
 
 association
 belongs_to  soft
@@ -170,9 +170,9 @@ association
 has_one buyer
 
 ## deli テーブル
-| calo_id      | integer    | null: false, foreign_key: true |
+| calo_id       | integer    | null: false, foreign_key: true |
 | zip           | string     | null: false                    |
-|region＿id     | integer    | null: false                    |
+|region＿id      | integer    | null: false                    |
 | city          | string     | null: false                    |
 | reference     | string     | null: false                    |
 | building      | string     |                                |
@@ -183,9 +183,9 @@ has_one bento
 
 
 ## add テーブル
-| soft_id      | integer    | null: false, foreign_key: true |
+| soft_id       | integer    | null: false, foreign_key: true |
 | zip           | string     | null: false                    |
-|region＿id     | integer    | null: false                    |
+|region＿id      | integer    | null: false                    |
 | city          | string     | null: false                    |
 | reference     | string     | null: false                    |
 | building      | string     |                                |
