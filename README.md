@@ -70,9 +70,9 @@ Ruby RubyonRails Javascript Heroku
 | first_name_kana     | string | null: false |
 
 association
-item
-has_many buyers
-has_many reviwes
+has_many item
+<br>has_many buyers</br>
+<br>has_many reviwes</br>
 
 ## items テーブル
 
@@ -80,6 +80,8 @@ has_many reviwes
 | --------------------| ------ | ----------- |
 | name                | string | null: false |
 
+associaiton
+<br>belongs_to user</br>
 
 
 ## protein テーブル
