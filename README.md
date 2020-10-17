@@ -1,5 +1,63 @@
-# README
+# HealthLunch
 
+<img src="gyazo.jpg" width="100%" height="400px">
+
+# 概要
+.商品購入機能
+.ユーザー管理機能
+.SNSアカウントログイン機能
+.レビュー機能
+.レーティング機能
+.管理者機能
+
+
+
+# アプリURL
+https://health-lunch.herokuapp.com/
+
+
+# 制作背景
+高齢化が進む現在、自宅に居ながら病院食と同じように栄養を考え調理することは非常に手間がかかります。
+ご両親の介護をされている方、召し上がられるご高齢者の方が安心・安全で「食」という観点から健康的な生活ができるように作成致しました。
+
+# 特徴
+１　トップページ
+
+<img src="gyazo2.jpg" width="100%" height="400px">
+<img src="gyazo3.jpg" width="100%" height="400px">
+
+
+2 新規登録画面
+<img src="gyazo8.jpg" width="100%" height="400px">
+
+
+3 ログイン画面
+<img src="gyazo7.jpg" width="100%" height="400px">
+
+4 詳細画面
+<img src="gyazo5.jpg" width="100%" height="400px">
+<img src="gyazo6.png" width="100%" height="400px">
+
+5 レビュー機能   
+<img src="gyazo10.jpg" width="100%" height="400px"> 
+<img src="gyazo9.jpg" width="100%" height="400px">                           
+
+
+# 工夫ポイント
+レイアウト
+文字の大きさ、色合い、40代〜60代の方が見やすいようにシンプルにコーティングしました。
+
+レビュー機能
+詳細画面を見やすく、操作を簡単にしました。
+認知度が低い介護食という観点から、レビュー機能を実装することにより、介護弁当の評価を実際に召し上がったユーザーに評価して頂き認知度を広めることを目的に作成しました。
+
+# 環境開発
+Ruby RubyonRails Javascript Heroku 
+
+# 課題
+商品が１品ずつしか購入できない仕様になっているため、買い物カゴ機能の実装を行い、複数商品購入できるような仕様にして行きたいと考えています。
+
+# データベース設計
 ## users テーブル
 
 | Column              | Type   | Options     |
@@ -82,9 +140,14 @@ belongs_to user
 has_one delivery
 
 ## bento テーブル
+
 |----------------|---------|-------------------------------|
 | user_id        | integer | null: false, foreign_key: true|
 | calo_id        | integer | null: false, foreign_key: true|
+=======
+| user_id           | integer | null: false, foreign_key: true|
+| calo_id           | integer | null: false, foreign_key: true|
+
 
 association
 belongs_to  calo
@@ -93,9 +156,13 @@ has_one deli
 
 
 ## shohin テーブル
+
 |----------------|---------|-------------------------------|
 | user_id        | integer | null: false, foreign_key: true|
 | soft_id        | integer | null: false, foreign_key: true|
+| user_id           | integer | null: false, foreign_key: true|
+| soft_id           | integer | null: false, foreign_key: true|
+
 
 association
 belongs_to  soft
@@ -116,10 +183,11 @@ association
 has_one buyer
 
 ## deli テーブル
+
 |---------------|------------|--------------------------------|
 | calo_id       | integer    | null: false, foreign_key: true |
 | zip           | string     | null: false                    |
-|region＿id     | integer    | null: false                    |
+|region＿id      | integer    | null: false                    |
 | city          | string     | null: false                    |
 | reference     | string     | null: false                    |
 | building      | string     |                                |
@@ -130,10 +198,15 @@ has_one bento
 
 
 ## add テーブル
+
 |---------------|------------|--------------------------------|
 | soft_id       | integer    | null: false, foreign_key: true |
 | zip           | string     | null: false                    |
 | region＿id    | integer    | null: false                    |
+=======
+| soft_id       | integer    | null: false, foreign_key: true |
+| zip           | string     | null: false                    |
+|region＿id      | integer    | null: false                    |
 | city          | string     | null: false                    |
 | reference     | string     | null: false                    |
 | building      | string     |                                |
