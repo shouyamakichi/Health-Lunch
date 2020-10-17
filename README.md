@@ -70,9 +70,9 @@ Ruby RubyonRails Javascript Heroku
 | first_name_kana     | string | null: false |
 
 association
-has_many item
-<br>has_many buyers</br>
-<br>has_many reviwes</br>
+<br>has_many: items</br>
+<br>has_many: buyers</br>
+<br>has_many: reviwes</br>
 
 ## items テーブル
 
@@ -81,7 +81,7 @@ has_many item
 | name                | string | null: false |
 
 associaiton
-<br>belongs_to user</br>
+<br>belongs_to: user</br>
 
 
 ## protein テーブル
@@ -98,8 +98,8 @@ associaiton
 | carbo              | string | null: false |
 
 association 
-has_many users
-belongs_to protein
+<br>has_many: users</br>
+<br>belongs_to: protein</br>
 
 
 ## soft テーブル
@@ -115,8 +115,8 @@ belongs_to protein
 | carbo               | string | null: false |
 
 association 
-has_many users
-belongs_to soft
+<br>has_many: users</br>
+<br>belongs_to: soft</br>
 
 
 ## calo テーブル
@@ -133,8 +133,8 @@ belongs_to soft
 | carbo              | string | null: false |
 
 association 
-has_many users
-belongs_to calo
+<br>has_many: users</br>
+<br>belongs_to: calo</br>
 
 
 ## buyer テーブル
@@ -145,9 +145,9 @@ belongs_to calo
 | protein_id        | integer    | null: false, foreign_key: true|
 
 association
-belongs_to  protein
-belongs_to user
-has_one delivery
+<br>belongs_to:  protein
+<br>belongs_to: user
+<br>has_one: delivery
 
 ## bento テーブル
 
