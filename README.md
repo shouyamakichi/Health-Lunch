@@ -231,7 +231,7 @@ association
 | Column     | Type        | Options                        |
 |------------|-------------|--------------------------------|
 | user_id    |integer      | null: false, foreign_key: true |
-| item_id    |integer      | null: false. foreign_key: true |
+| item_id    |integer      | null: false foreign_key: true |
 | score      |string       | null: false                    |
 | content    |string       | null: false                    |
 
