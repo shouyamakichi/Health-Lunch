@@ -75,6 +75,7 @@ has_many buyers
 has_many reviwes
 
 ## items テーブル
+
 | Column              | Type   | Options     |
 | --------------------| ------ | ----------- |
 | name                | string | null: false |
@@ -82,6 +83,7 @@ has_many reviwes
 
 
 ## protein テーブル
+
 | Column             | Type   | Options     |
 |--------------------| ------ | ----------- |
 | name               | string | null: false |
@@ -116,6 +118,7 @@ belongs_to soft
 
 
 ## calo テーブル
+
 | Column             | Type   | Options     |
 |--------------------| ------ | ----------- |
 | name               | string | null: false |
@@ -135,7 +138,7 @@ belongs_to calo
 ## buyer テーブル
 
 | Column            | Type       | Options                       |
-|--------------------------------|-------------------------------|
+|-------------------|------------|-------------------------------|
 | user_id           | integer    | null: false, foreign_key: true|
 | protein_id        | integer    | null: false, foreign_key: true|
 
@@ -176,6 +179,7 @@ belongs_to user
 has_one add
 
 ## delivery テーブル
+
 | Column        | Type       | Options                        |
 |---------------|------------|--------------------------------|
 | buyer_id      | integer    | null: false, foreign_key: true |
