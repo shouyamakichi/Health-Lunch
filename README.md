@@ -24,7 +24,8 @@ has_many reviwes
 
 
 ## protein テーブル
-|--------------------| ------ | ----------- |
+| Column             | Type   | Options     |
+| -------------------| ------ | ----------- |
 | name               | string | null: false |
 | acount             | string | null: false |
 | price              | string | null: false |
@@ -40,6 +41,7 @@ belongs_to protein
 
 
 ## soft テーブル
+| Column              | Type   | Options     |
 | --------------------| ------ | ----------- |
 | name                | string | null: false |
 | acount              | string | null: false |
@@ -56,6 +58,7 @@ belongs_to soft
 
 
 ## calo テーブル
+| Column-------------| Type   | Options     |
 |--------------------| ------ | ----------- |
 | name               | string | null: false |
 | acount             | string | null: false |
@@ -72,7 +75,8 @@ belongs_to calo
 
 
 ## buyer テーブル
-|--------------------------------|-----------------------|
+| Column            | Type       | Options                       | 
+|-------------------|------------|-------------------------------|
 | user_id           | integer    | null: false, foreign_key: true|
 | protein_id        | integer    | null: false, foreign_key: true|
 
@@ -82,6 +86,7 @@ belongs_to user
 has_one delivery
 
 ## bento テーブル
+| Column         | Type    | Options                       |
 |----------------|---------|-------------------------------|
 | user_id        | integer | null: false, foreign_key: true|
 | calo_id        | integer | null: false, foreign_key: true|
@@ -93,6 +98,7 @@ has_one deli
 
 
 ## shohin テーブル
+| Clomn          | Type    | Options                       |
 |----------------|---------|-------------------------------|
 | user_id        | integer | null: false, foreign_key: true|
 | soft_id        | integer | null: false, foreign_key: true|
@@ -103,6 +109,7 @@ belongs_to user
 has_one add
 
 ## delivery テーブル
+| Clomn         | Type      | Options                          |
 |---------------|------------|--------------------------------|
 | buyer_id      | integer    | null: false, foreign_key: true |
 | zip           | string     | null: false                    |
@@ -116,6 +123,7 @@ association
 has_one buyer
 
 ## deli テーブル
+| Clomn         | Type      | Options                         |
 |---------------|------------|--------------------------------|
 | calo_id       | integer    | null: false, foreign_key: true |
 | zip           | string     | null: false                    |
@@ -130,6 +138,7 @@ has_one bento
 
 
 ## add テーブル
+| Clomn         | Type       | Options                        |
 |---------------|------------|--------------------------------|
 | soft_id       | integer    | null: false, foreign_key: true |
 | zip           | string     | null: false                    |
@@ -143,6 +152,7 @@ association
 has_one shohin
 
 ## review テーブル
+| Clomn      | Type        | Options                        |
 |------------|-------------|--------------------------------|
 | user_id    |integer      | null: false, foreign_key: true |
 | item_id    |integer      | null: false. foreign_key: true |
