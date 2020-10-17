@@ -35,8 +35,8 @@ https://health-lunch.herokuapp.com/
 <img src="gyazo7.jpg" width="100%" height="400px">
 
 4 詳細画面
-<img src="gyazo5,jpg" width="100%" height="400px">
-<img src="gyazo6,jpg" width="100%" height="400px">
+<img src="gyazo5.jpg" width="100%" height="400px">
+<img src="gyazo6.jpg" width="100%" height="400px">
 
 
 
