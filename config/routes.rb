@@ -6,7 +6,7 @@ Rails.application.routes.draw do
  }
 
   resources :users, only: :new
-
+  
   namespace :admin do
     resources :user_sessions, only: :new 
   end
