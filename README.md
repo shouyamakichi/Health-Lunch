@@ -59,7 +59,7 @@ https://health-lunch.herokuapp.com/
 認知度が低い介護食という観点から、レビュー機能を実装することにより、介護弁当の評価を実際に召し上がったユーザーに評価して頂き認知度を広めることを目的に作成しました。
 
 # 環境開発
-Ruby RubyonRails Javascript Heroku 
+HTML CSS Ruby RubyonRails Javascript Heroku Git 
 
 # 課題
 商品が１品ずつしか購入できない仕様になっているため、買い物カゴ機能の実装を行い、複数商品購入できるような仕様にして行きたいと考えています。
