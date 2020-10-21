@@ -42,6 +42,8 @@ https://health-lunch.herokuapp.com/
 <img src="Videotogif.gif" width="100%" height="400px"> 
 <img src="gyazo9.jpg" width="100%" height="400px">                           
 
+#レスポンシブ
+<img src ="Videotogif(8).gif">
 
 # 工夫ポイント
 レイアウト
