@@ -23,7 +23,7 @@ https://health-lunch.herokuapp.com/
 # テスト用アカウント
 購入者
 メールアドレス：　sho@12345
-パスワード   ：　sho12345
+<br>パスワード   ：　sho12345
 
 # DEMO
 １　トップページ
