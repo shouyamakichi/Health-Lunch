@@ -8,12 +8,10 @@ Rails.application.routes.draw do
   resources :users, only: :new
   
   resources :cart_items 
-  resources :carts 
-    # member do
-    #   get :show
-    # end
-  # end
+
+  resources :orders, only: [:index, :create]
   
+  resources :carts  
   
   namespace :admin do
     resources :user_sessions, only: :new 
@@ -25,7 +23,7 @@ Rails.application.routes.draw do
   end
   
   resources :proteins do
-    resources :buyers, only: [:index, :create]
+    resources :buyers
   end
 
   resources :softs do

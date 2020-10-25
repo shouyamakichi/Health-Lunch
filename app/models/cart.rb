@@ -1,10 +1,9 @@
 class Cart < ApplicationRecord
   has_many :cart_items, dependent: :destroy
   has_many :proteins, through: :cart_items
-  
+  has_one :order
   #sessionの中身と紐付く内容
   def add_protein(protein_id)
-    # cart_items.find_or_initialize_by(protein_id: protein_id)
     current_item = cart_items.find_by_protein_id(protein_id)
     if current_item
       current_item.quantity += 1
@@ -16,6 +15,7 @@ class Cart < ApplicationRecord
 
   
   def total_price
-    cart_items.to_a.sum {|item| item.total_price }
+    current_price = cart_items.to_a.sum {|item| item.total_price }
   end
+
 end

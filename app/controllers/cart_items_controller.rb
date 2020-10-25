@@ -6,7 +6,6 @@ class CartItemsController < ApplicationController
   
   def show 
     @cart_item = CartItem.find(params[:id])
-    # @cart_items = CartItem.all
   end
   
   def new
@@ -20,7 +19,6 @@ class CartItemsController < ApplicationController
   
   def create
     @cart = current_cart
-    # cart = current_cart 
     protein = Protein.find(params[:protein_id])
     # @cart_item = cart.add_protein(protein.id)
     @cart_item = @cart.add_protein(protein.id)

@@ -1,3 +1,174 @@
-// Place all the styles related to the carts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.cart-body{
+  background-color: #FFFFEE;
+  padding-bottom: 80px;
+}
+
+.cart {
+  color: #363636;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+
+.notice{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.cart-image{
+  width: 20%;
+  height: 150px;
+}
+
+table {
+  width: auto;
+  border-spacing: 0;
+  font-size:14px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+table th {
+  color: #fff;
+  padding: 8px 15px;
+  background: blue;
+  background:-moz-linear-gradient(rgba(34,85,136,0.7), rgba(34,85,136,0.9) 50%);
+  background:-webkit-gradient(linear, 100% 0%, 100% 50%, from(rgba(34,85,136,0.7)), to(rgba(34,85,136,0.9)));
+  font-weight: bold;
+  border-left:1px solid #258;
+  border-top:1px solid #258;
+  border-bottom:1px solid #258;
+  line-height: 120%;
+  text-align: center;
+  text-shadow:0 -1px 0 rgba(34,85,136,0.9);
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+}
+
+table tr td {
+  padding: 8px 15px;
+  border-bottom: 1px solid #84b2e0;
+  border-left: 1px solid #84b2e0;
+  text-align: center;
+}
+
+table tr td:last-child {
+  border-right: 1px solid #84b2e0;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+
+table tr {
+  background: #fff;
+}
+
+table tr:nth-child(2n+1) {
+  background: #f1f6fc;
+}
+
+table tr:last-child td {
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+
+table tr:hover {
+  background: #fffafa;
+  cursor:pointer;
+}
+
+.cart-show{
+  padding-top: 50px;
+}
+
+.cart-item{
+  padding-bottom: 50px;
+  margin-left: 40%;
+  background-color:  #FFFFEE;
+}
+
+.cart-btn-item{
+  display: flex;
+  justify-content: space-around;
+}
+
+.fbtn{
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color:  #dcdcdc;
+  box-shadow: 0px 2px 2px 1px #dcdcdc;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+
+.cart-btn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 12px 0 8px;
+  text-decoration: none;
+  color: #67c5ff;
+  transition: .4s;
+  margin: 0 auto;
+}
+
+.cart-btn:before{
+ position: absolute;
+ content: '';
+ width: 100%;
+ height: 4px;
+ top:100%;
+ left: 0;
+ border-radius: 3px;
+ background:#67c5ff;
+ transition: .2s;
+}
+
+.cart-btn:after{
+ position: absolute;
+ content: '';
+ width: 100%;
+ height: 4px;
+ top:0;
+ left: 0;
+ border-radius: 3px;
+ background:#67c5ff;
+ transition: .2s;
+}
+
+.cart-total{
+  background-color: white;
+  font-size: 30px;
+  margin-left: 73%;
+  margin-top: 30px;
+  margin-right: 200px;
+  border: 1px solid black;
+  display: flex;
+  width: 20%;
+}
+
+.cart-name{
+  font-size: 20px;
+  padding-top: 80px;
+}
+
+.btn-cart{
+  margin-left: 7%;
+  margin-top: 50px;
+}
+
+.total{
+  padding-right: 70px;
+  padding-left: 20px;
+}
+
+
+
+

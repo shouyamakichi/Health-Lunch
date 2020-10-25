@@ -8,17 +8,17 @@ const pay = () => {
     const formData = new FormData(formResult);
 
     const card = {
-      number: formData.get("buyer_delivery[number]"),
-      cvc: formData.get("buyer_delivery[cvc]"),
-      exp_month: formData.get("buyer_delivery[exp_month]"),
-      exp_year: `20${formData.get("buyer_delivery[exp_year]")}`
+      number: formData.get("order_purchase[number]"),
+      cvc: formData.get("order_purchase[cvc]"),
+      exp_month: formData.get("order_purchase[exp_month]"),
+      exp_year: `20${formData.get("order_purchase[exp_year]")}`
     };
     console.log(card)
     Payjp.createToken(card, (status, response) => {
       if (status == 200) {
         const token = response.id;
         const renderDom = document.getElementById("card-form");
-        const tokenObj = `<input value=${token} type="hidden" name='buyer_delivery[token]'>`;
+        const tokenObj = `<input value=${token} type="hidden" name='order_purchase[token]'>`;
         renderDom.insertAdjacentHTML("beforeend", tokenObj);
         console.log(token)
       }
