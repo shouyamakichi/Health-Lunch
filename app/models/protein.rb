@@ -2,6 +2,9 @@ class Protein < ApplicationRecord
   has_one_attached :image
   belongs_to :user
   has_one :buyer
+  has_many :cart_items
+  before_destroy :referenced_by_cart_item
+
 
   with_options presence:true do
     validates :image
@@ -22,5 +25,15 @@ class Protein < ApplicationRecord
     validates :second
     validates :third
     validates :forth
+  end
+
+  private 
+  def referenced_by_cart_item
+    if cart_items.empty?
+      return true
+    else
+      errors.add(:base, '品目が存在します。')
+      retuen false
+    end
   end
 end

@@ -51,6 +51,7 @@ class ProteinsController < ApplicationController
   
   private
 
+
   
   #管理者のみnew,editへURL直接打ち込んでの遷移可能
   def move_to_new
@@ -66,7 +67,7 @@ class ProteinsController < ApplicationController
   end
 
     def proteins_params
-      params.require(:protein).permit(:image, :name, :price, :energy, :prote, :salt, :Lipid, :carbo, :first, :second, :third, :forth,:fifth).merge(user_id: current_user.id)
+      params.require(:protein).permit(:image, :name, :price, :energy, :prote, :salt, :Lipid, :carbo, :first, :second, :third, :forth,:fifth, cart_ids: []).merge(user_id: current_user.id)
     end
 
 

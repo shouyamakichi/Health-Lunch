@@ -1,0 +1,8 @@
+<div class="fields">
+  <%= collection_check_boxes :protein, :cart_ids, Cart.all, :id, quantity %>
+</div>
+
+<div class="actions">
+  <%= form.submit %>
+</div>
+<% end %>

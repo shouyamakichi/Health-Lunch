@@ -63,13 +63,12 @@
             <div class='btn-red'>
               <%= link_to '削除', protein_path, method: :delete, class: 'item-red-btn'%>
             </div>
-          <% else %>
-              <div class='btn-green'>
-                <%= link_to '購入画面に進む', protein_buyers_path(@protein), class: 'item-green-btn'%>
-              </div>
           <% end %>
         <% end %>
       </div>
     </div>
   </div>
-</div>
+  <div class="cart">
+        <%= button_to 'カートに入れる', cart_items_path(protein_id: @protein), class: 'fdtn' %>
+  </div>
+  </div>

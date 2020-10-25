@@ -1,0 +1,18 @@
+<h2>カートに追加された商品</h2>
+<% @cart_items.each do |cart_item| %>
+  <% protein = cart_item.protein %>
+  <div>
+    <p><%= protein.name %></p>
+    <p><%= cart_item.quantity %>個</p>
+    <p>
+      <%= number_to_currency cart_item.total_price, precision: 0, unit: "", format: "%u %n" %>
+      <span>円 (税込)</span>
+    </p>
+  </div>
+<% end %>
+
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<span></span><%= link_to '買い物を続ける', proteins_path, :class => 'btn' %><span>
+<%= button_to 'カートを空にする', @cart, method: :delete %>

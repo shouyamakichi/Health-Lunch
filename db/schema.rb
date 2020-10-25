@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_18_045917) do
+ActiveRecord::Schema.define(version: 2020_10_25_104647) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -78,13 +78,11 @@ ActiveRecord::Schema.define(version: 2020_10_18_045917) do
   end
 
   create_table "cart_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "quantity", default: 0, null: false
-    t.bigint "protein_id", null: false
-    t.bigint "cart_id", null: false
+    t.integer "quantity", default: 1
+    t.integer "protein_id", null: false
+    t.integer "cart_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
-    t.index ["protein_id"], name: "index_cart_items_on_protein_id"
   end
 
   create_table "carts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -122,6 +120,13 @@ ActiveRecord::Schema.define(version: 2020_10_18_045917) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "cart_id", null: false
+    t.integer "total_price", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "proteins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "price", null: false
@@ -138,6 +143,18 @@ ActiveRecord::Schema.define(version: 2020_10_18_045917) do
     t.string "third", null: false
     t.string "forth", null: false
     t.string "fifth", null: false
+  end
+
+  create_table "purchases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "order_id", null: false
+    t.string "pref01"
+    t.string "addr01"
+    t.string "zip01", null: false
+    t.string "reference", null: false
+    t.string "building"
+    t.string "phone_number", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -201,7 +218,5 @@ ActiveRecord::Schema.define(version: 2020_10_18_045917) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "cart_items", "carts"
-  add_foreign_key "cart_items", "proteins"
   add_foreign_key "sns_credentials", "users"
 end
