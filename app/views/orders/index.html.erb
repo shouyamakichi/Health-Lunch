@@ -9,7 +9,8 @@
   </div>
   <div class='buyer-second-contents'>
     <%= form_with id:'card-form', model: @order, url: orders_path(@cart), class: 'transaction-form-wrap', local: true do |f| %>
-    <%=f.text_field :total_price, value: @cart.total_price, class:"input"%>
+     <div class="price-total">¥<%=f.text_field :total_price, value: @cart.total_price, readonly: true, class:"cart-item-pricebtn"%>
+     </div>
     <div class='buyers-con'>
       <div class="buyers-header">
       <%= render 'shared/error_messages', model: f.object %>
@@ -85,8 +86,7 @@
         </div>
       </div>
       <div class='buyer-btn'>
-        <%= button_to "購入を確定する" ,class:"buyer-red-btn" %>
-      </div>
+        <%= button_to "購入を確定する" ,class:"buyer-btn" %>
       </div>
     </div>
     <% end %>

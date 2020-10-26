@@ -1,38 +1,43 @@
-<%= render "shared/header" %>
-
-<div class=cart-body>
-  <h2 class="cart">注文内容</h2>
-    <% if notice %>
-      <p  class="notice", id="notice"><%= notice %></p>
-    <% end %>
-  <table>
-    <tr>
-    <div class='cart-btn-item'>
-      <div><%= link_to '買い物を続ける', root_path, class: 'cart-btn' %></div>
-      <div class= 'cart-item'>
-        <%= button_to 'カートを空にする', @cart, method: :delete, date: {confirm: 'カートを空にしてよろしいですか？'}, class: 'fbtn' %>
-      </div>
-    </div>
-      <th>商品画像</th>
-      <th>商品名</th>
-      <th>個数</th>
-      <th>価格</th>
-      <th></th>
-    </tr>
-      <% @cart.cart_items.each do |item| %>
-    <tr>
-        <td><%= image_tag item.protein.image, class: "cart-image" %></td>
-        <td class='cart-name'><%= item.protein.name %></td>
-        <td class='cart-name'><%= item.quantity %>個</td>
-        <td class='cart-name'><%= (item.total_price).to_i %>円</td>
-        <td class='cart-name'><%= button_to '削除', item, method: :delete, data: {confirm: 'カートから削除してよろしいですか？'}%></td>
-    </tr>
+<div class="cart-body-contents">
+  <%= render "shared/header" %>
+  <div class=cart-body>
+    <h2 class="cart">注文内容</h2>
+      <% if notice %>
+        <p  class="notice", id="notice"><%= notice %></p>
       <% end %>
-  </table>
-    <div class="cart-total">
-      <p class="total">合計:</p>  
-      <%= (@cart.total_price).to_i %>円
-    </div>
-
-  <%= link_to '注文する',  orders_path, method: :get, class: 'cart-btn' %>
+      <div class='cart-btn-item'>
+        <div><%= link_to '買い物を続ける', root_path, class: 'cart-btn' %></div>
+        <div class= 'cart-item'>
+          <%= button_to 'カートを空にする', @cart, method: :delete, date: {confirm: 'カートを空にしてよろしいですか？'}, class: 'fbtn' %>
+        </div>
+      </div>
+        <% @cart.cart_items.each do |item| %>
+        <div class="cart-contents">
+          <%= image_tag item.protein.image, class: "cart-image" %>
+            <div class='cart-name-two'><%= item.protein.name %>
+            <div class="cart-menu-contents"> 
+              <ul>
+                <li class="cart-menu"><%= item.protein.first %></li>
+                <li class="cart-menu"><%= item.protein.second %></li>
+                <li class="cart-menu"><%= item.protein.third %></li>
+                <li class="cart-menu"><%= item.protein.forth %></li>
+                <li class="cart-menu"><%= item.protein.fifth %></li>
+              </ul>
+            </div>
+            </div>
+            <div class="cart-name-content">
+              <div class='cart-name-price'>¥<%= (item.total_price).to_i %></div>
+              <div class="cart-quantity">
+                <div class='cart-name-quantity'><%= item.quantity %></div>
+                <%= button_to '削除', item, method: :delete, data: {confirm: 'カートから削除してよろしいですか？'}, class: "cart-redbtn"%>
+              </div>
+            </div>
+        </div>
+        <% end %>
+        <div class="cart-total">
+          <p class="total">合計:</p>  
+          <%= (@cart.total_price).to_i %>円
+        </div>
+        <%= link_to 'ご注文手続きへ',  orders_path, method: :get, class: 'cart-item-btn' %>
+  </div>
 </div>
