@@ -8,7 +8,6 @@ class OrderPurchase
     validates :reference
     validates :phone_number, format: { with: /\A\d{11}\z/}
     validates :token
-    validates :total_price
   end
 
 
