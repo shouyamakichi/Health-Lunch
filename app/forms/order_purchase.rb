@@ -10,7 +10,6 @@ class OrderPurchase
     validates :token
   end
 
-
   def save
     order = Order.create(total_price: total_price, cart_id: cart_id)
     Purchase.create(zip01: zip01, pref01: pref01, addr01: addr01, reference: reference, building: building, phone_number: phone_number, order_id: order.id)

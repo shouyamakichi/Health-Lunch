@@ -14,17 +14,17 @@
       <div class='menu-category'>
         <ul class='category-menu'>
           <% @proteins.each do |protein| %>
-          <li class='menu'>
-            <%= link_to protein_path(protein.id), class: 'link' do%>
-              <%= image_tag protein.image, class: 'bento-contents' if protein.image.attached? %>
-              <div class="item-info">
-                <h3 class='item-name'><%= protein.name %><h3>
-                <div class='item-price'>
-                  <span class='price'><%= protein.price %>円(税抜)</span>
+            <li class='menu'>
+              <%= link_to protein_path(protein.id), class: 'link' do%>
+                <%= image_tag protein.image, class: 'bento-contents' if protein.image.attached? %>
+                <div class="item-info">
+                  <h3 class='item-name'><%= protein.name %><h3>
+                  <div class='item-price'>
+                    <span class='price'><%= protein.price %>円(税抜)</span>
+                  </div>
                 </div>
-              </div>
-            <% end %>
-          </li>
+              <% end %>
+            </li>
           <% end %>
         </ul>
       </div>
