@@ -4,16 +4,17 @@ class OrdersController < ApplicationController
     @carts = Cart.find_by(params[:cart_id])
     @order = OrderPurchase.new
     @cart = current_cart
-
+    
     respond_to do |format|
       format.html
       format.json { render json: @order}
     end
   end
-
+  
   def create
     @carts = Cart.find_by(params[:cart_id])
     @order = OrderPurchase.new(order_params)
+    @cart = current_cart 
     if @order.valid?
       @order.save
       pay_item
