@@ -65,11 +65,14 @@ class ProteinsController < ApplicationController
   def item_set
     @protein = Protein.find(params[:id])
   end
+  
+  def soft_set
+    @soft= Soft.find(params[:id])
+  end
+
+
 
     def proteins_params
       params.require(:protein).permit(:image, :name, :price, :energy, :prote, :salt, :Lipid, :carbo, :first, :second, :third, :forth,:fifth, cart_ids: []).merge(user_id: current_user.id)
     end
-
-
-
 end

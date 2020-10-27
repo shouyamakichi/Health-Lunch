@@ -4,7 +4,7 @@ class CartItem < ApplicationRecord
   # belongs_to :order
 
   def total_price
-    protein.price * quantity
+    protein.price * quantity 
   end
 
 end
