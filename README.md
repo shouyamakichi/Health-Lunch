@@ -26,24 +26,26 @@ https://health-lunch.herokuapp.com/
 <br>パスワード   ：　sho12345
 
 # DEMO
-１　トップページ
+
+
+# １　トップページ
 
 <img src="gyazo2.jpg" width="100%" height="400px">
 <img src="gyazo3.jpg" width="100%" height="400px">
 
 
-2 新規登録画面
+# 2 新規登録画面
 <img src="gyazo8.jpg" width="100%" height="400px">
 
 
-3 ログイン画面
+# 3 ログイン画面
 <img src="gyazo7.jpg" width="100%" height="400px">
 
-4 詳細画面
+# 4 詳細画面
 <img src="gyazo5.jpg" width="100%" height="400px">
 <img src="gyazo6.png" width="100%" height="400px">
 
-5 レビュー機能   
+# 5 レビュー機能   
 <img src="Videotogif.gif" width="100%" height="400px"> 
 <img src="gyazo9.jpg" width="100%" height="400px">                           
 
@@ -54,7 +56,7 @@ https://health-lunch.herokuapp.com/
 レイアウト
 文字の大きさ、色合い、40代〜60代の方が見やすいようにシンプルにコーティングしました。
 
-レビュー機能
+# レビュー機能
 詳細画面を見やすく、操作を簡単にしました。
 認知度が低い介護食という観点から、レビュー機能を実装することにより、介護弁当の評価を実際に召し上がったユーザーに評価して頂き認知度を広めることを目的に作成しました。
 
