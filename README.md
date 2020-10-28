@@ -70,7 +70,7 @@ HTML CSS Ruby RubyonRails Javascript Heroku Git
 商品が１品ずつしか購入できない仕様になっているため、買い物カゴ機能の実装を行い、複数商品購入できるような仕様にして行きたいと考えています。
 
 # ER図
-<img src="er.png" width="100%" height="400px">
+<img src="er.png" width="70%" height="600px">
 
 # データベース設計
 ## users テーブル
