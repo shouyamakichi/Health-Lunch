@@ -46,7 +46,7 @@ https://health-lunch.herokuapp.com/
 <img src="gyazo6.png" width="100%" height="400px">
 
 # 5 カート画面
-<im
+<img src="cart1.png" width="100%" height="400px">
 
 # 6 レビュー機能   
 <img src="Videotogif.gif" width="100%" height="400px"> 
