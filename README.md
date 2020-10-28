@@ -30,8 +30,8 @@ https://health-lunch.herokuapp.com/
 
 # １　トップページ
 
-<img src="gyazo2.jpg" width="100%" height="400px">
-<img src="gyazo3.jpg" width="100%" height="400px">
+<img src="s1.png" width="100%" height="400px">
+<img src="s2.jpg" width="100%" height="400px">
 
 
 # 2 新規登録画面
@@ -117,131 +117,6 @@ association
 <br>belongs_to :protein
 
 
-## soft テーブル
-| Column              | Type   | Options     |
-| --------------------| ------ | ----------- |
-| name                | string | null: false |
-| acount              | string | null: false |
-| price               | string | null: false |
-| energy              | string | null: false |
-| prote               | string | null: false |
-| salt                | string | null: false |
-| Lipid               | string | null: false |
-| carbo               | string | null: false |
-
-association 
-<br>has_many :users
-<br>belongs_to :soft
-<br>has_many :cart-item
-
-
-## calo テーブル
-
-| Column             | Type   | Options     |
-|--------------------| ------ | ----------- |
-| name               | string | null: false |
-| acount             | string | null: false |
-| price              | string | null: false |
-| energy             | string | null: false |
-| prote              | string | null: false |
-| salt               | string | null: false |
-| Lipid              | string | null: false |
-| carbo              | string | null: false |
-
-association 
-<br>has_many :users
-<br>belongs_to :calo
-
-
-## buyer テーブル
-
-| Column            | Type       | Options                       |
-|-------------------|------------|-------------------------------|
-| user_id           | integer    | null: false, foreign_key: true|
-| protein_id        | integer    | null: false, foreign_key: true|
-
-association
-<br>belongs_to :protein
-<br>belongs_to :user
-<br>has_one :delivery
-
-## bento テーブル
-
-| Column         | Type    | Options                       |
-|----------------|---------|-------------------------------|
-| user_id        | integer | null: false, foreign_key: true|
-| calo_id        | integer | null: false, foreign_key: true|
-| user_id        | integer | null: false, foreign_key: true|
-| calo_id        | integer | null: false, foreign_key: true|
-
-
-association
-<br>belongs_to :calo
-<br>belongs_to :user
-<br>has_one: :deli
-
-
-## shohin テーブル
-
-| Column         | Type    | Options                       |
-|----------------|---------|-------------------------------|
-| user_id        | integer | null: false, foreign_key: true|
-| soft_id        | integer | null: false, foreign_key: true|
-| user_id        | integer | null: false, foreign_key: true|
-| soft_id        | integer | null: false, foreign_key: true|
-
-
-association
-<br>belongs_to :soft
-<br>belongs_to :user
-<br>has_one :add
-
-## delivery テーブル
-
-| Column        | Type       | Options                        |
-|---------------|------------|--------------------------------|
-| buyer_id      | integer    | null: false, foreign_key: true |
-| zip           | string     | null: false                    |
-| region_id     | integer    | null: false                    |
-| city          | string     | null: false                    |
-| reference     | string     | null: false                    |
-| building      | string     |                                |
-| phone_number  | string     | null: false                    |
-
-association
-<br>has_one :buyer
-
-## deli テーブル
-
-| Column        | Type       | Options                        |
-|---------------|------------|--------------------------------|
-| calo_id       | integer    | null: false, foreign_key: true |
-| zip           | string     | null: false                    |
-| region_id     | integer    | null: false                    |
-| city          | string     | null: false                    |
-| reference     | string     | null: false                    |
-| building      | string     |                                |
-| phone_number  | string     | null: false                    |
-
-association
-<br>has_one :bento
-
-
-## add テーブル
-
-| Column        | Type       | Options                        |
-|---------------|------------|--------------------------------|
-| soft_id       | integer    | null: false, foreign_key: true |
-| zip           | string     | null: false                    |
-| region_id     | integer    | null: false                    |
-| city          | string     | null: false                    |
-| reference     | string     | null: false                    |
-| building      | string     |                                |
-| phone_number  | string     | null: false                    |
-
-association
-<br>has_one :shohin
-
 ## review テーブル
 
 | Column     | Type        | Options                        |
@@ -272,6 +147,16 @@ association
 
 association
 <br>belongs_to :protein
+<br>belongs_to :cart
+
+## order テーブル
+| Column        | Type        | Options                        |
+|---------------|-------------|--------------------------------|
+| cart_id       |integer      | null: false, foreign_key: true |
+| total_parice  |integer      | null: false foreign_key: true  |
+
+association
+<br>has_one :purchase
 <br>belongs_to :cart
 
 
