@@ -252,3 +252,25 @@ association
 
 association
 <br>belongs_to :user
+
+## cart テーブル
+| Column     | Type        | Options                        |
+|------------|-------------|--------------------------------|
+| id　　　    |integer      | null: false, foreign_key: true |
+
+association
+<br>has_many :cart-item
+
+## cart-item テーブル
+| Column     | Type        | Options                        |
+|------------|-------------|--------------------------------|
+| user_id    |integer      | null: false, foreign_key: true |
+| item_id    |integer      | null: false foreign_key: true |
+| score      |string       | null: false                    |
+| content    |string       | null: false                    |
+
+association
+<br>belongs_to :protein
+<br>belongs_to :cart
+
+
