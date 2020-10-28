@@ -2,7 +2,7 @@ class Soft < ApplicationRecord
   has_one_attached :image
   belongs_to :user
   has_one :shohin
-
+  
   with_options presence:true do
     validates :image
     validates :name, format: { with: /\A[ぁ-んァ-ン一-龥]/}

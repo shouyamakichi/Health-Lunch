@@ -21,26 +21,26 @@
            <li><%=link_to 'ログイン', new_user_session_path, class: "login" %></li>
            <li><%=link_to '新規登録', new_user_registration_path, class: "sign_up"%></li>
           <% end %>
-            <li><%= link_to 'たんぱくケア', proteins_path  %></li>
-            <li><%= link_to 'カロリーケア', calos_path %></li>
-            <li><%= link_to 'やわらか食事', softs_path %></li>
+            <li><%= link_to 'メニュー一覧', proteins_path  %>
+            <%# <li><%= link_to 'カロリーケア', calos_path %></li> 
+            <%# <li><%= link_to 'やわらか食事', softs_path %></li> 
             <li><%= link_to 'よくある質問', "#" %></li>
             <li><%= link_to 'トップページへ戻る', root_path %></li>
             <% if user_signed_in? %>
               <% if current_user == @user || current_user.admin? %>
-                <li class='admin'><%= link_to 'たんぱくケア商品登録', new_protein_path %></li>
+                <li class='admin'><%= link_to '商品登録', new_protein_path %></li>
               <% end %>
             <% end %>
-            <% if user_signed_in? %>
-              <% if current_user == @user || current_user.admin? %>
-                <li class='admin'><%= link_to 'やわらか商品登録', new_soft_path %></li>
-              <% end %>
-            <% end %>
-            <% if user_signed_in? %>
-              <% if current_user == @user || current_user.admin? %>
-                <li class='admin'><%= link_to 'カロリー商品登録', new_calo_path %></li>
-              <% end %>
-            <% end %>
+            <%# <% if user_signed_in? %>
+              <%# <% if current_user == @user || current_user.admin? %> 
+                <%# <li class='admin'><%= link_to 'やわらか商品登録', new_soft_path %>
+              <%# <% end %> 
+            <%# <% end %> 
+            <%# <% if user_signed_in? %> 
+              <%# <% if current_user == @user || current_user.admin? %> 
+                <%# <li class='admin'><%= link_to 'カロリー商品登録', new_calo_path %>
+              <%# <% end %> 
+            <%# <% end %> 
           </ul>
           </div>
         </div>

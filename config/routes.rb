@@ -22,9 +22,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:index, :create]
   end
   
-  resources :proteins do
-    resources :buyers
-  end
+  resources :proteins 
 
   resources :softs do
     resources :shohins, only: [:index, :create]

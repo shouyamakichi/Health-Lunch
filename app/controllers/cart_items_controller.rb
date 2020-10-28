@@ -20,9 +20,7 @@ class CartItemsController < ApplicationController
   def create
     @cart = current_cart
     protein = Protein.find(params[:protein_id])
-    # @cart_item = cart.add_protein(protein.id)
     @cart_item = @cart.add_protein(protein.id)
-
     respond_to do |format|
       if @cart_item.save
         format.html {redirect_to @cart_item.cart, notice: "カートに商品が追加されました"}
@@ -59,7 +57,7 @@ class CartItemsController < ApplicationController
   private
 
   def cart_item_params
-    params.require(:cart_item).permit(:quantity, :protein_id, :cart_id)
+    params.require(:cart_item).permit(:quantity, :protein_id, :cart_id, :soft_id)
   end
 
 end
