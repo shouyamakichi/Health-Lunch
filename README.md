@@ -132,6 +132,7 @@ association
 association 
 <br>has_many :users
 <br>belongs_to :soft
+<br>has_many :cart-item
 
 
 ## calo テーブル
