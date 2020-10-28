@@ -8,6 +8,7 @@
 <br>.SNSアカウントログイン機能</br>
 <br>.レビュー機能</br>
 <br>.レーティング機能</br>
+<br>.カート機能</br>
 <br>.管理者機能(admin)</br>
 
 
@@ -67,7 +68,7 @@ https://health-lunch.herokuapp.com/
 HTML CSS Ruby RubyonRails Javascript Heroku Git 
 
 # 課題
-商品が１品ずつしか購入できない仕様になっているため、買い物カゴ機能の実装を行い、複数商品購入できるような仕様にして行きたいと考えています。
+メニューが1種類のみなので選択できるメニューを増やす予定です。
 
 # ER図
 <img src="er.png" width="70%" height="600px">
