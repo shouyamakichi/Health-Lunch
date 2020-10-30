@@ -6,7 +6,7 @@
     <p  class="notice", id="notice"><%= notice %></p>
   <% end %>
   <div class='cart-btn-item'>
-    <div><%= link_to '買い物を続ける', root_path, class: 'cart-btn' %></div>
+    <div><%= link_to '買い物を続ける', proteins_path, class: 'cart-btn' %></div>
     <div class= 'cart-item'>
       <%= button_to 'カートを空にする', @cart, method: :delete, date: {confirm: 'カートを空にしてよろしいですか？'}, class: 'fbtn' %>
     </div>
