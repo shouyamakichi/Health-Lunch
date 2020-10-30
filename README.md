@@ -8,6 +8,7 @@
 <br>.SNSアカウントログイン機能</br>
 <br>.レビュー機能</br>
 <br>.レーティング機能</br>
+<br>.カート機能</br>
 <br>.管理者機能(admin)</br>
 
 
@@ -22,7 +23,7 @@ https://health-lunch.herokuapp.com/
 
 # テスト用アカウント
 購入者
-メールアドレス：　sho@12345
+メールアドレス   ：　sho@ezweb.ne.jp
 <br>パスワード   ：　sho12345
 
 # DEMO
@@ -30,8 +31,8 @@ https://health-lunch.herokuapp.com/
 
 # １　トップページ
 
-<img src="gyazo2.jpg" width="100%" height="400px">
-<img src="gyazo3.jpg" width="100%" height="400px">
+<img src="s1.png" width="100%" height="400px">
+<img src="s2.jpg" width="100%" height="400px">
 
 
 # 2 新規登録画面
@@ -53,7 +54,7 @@ https://health-lunch.herokuapp.com/
 <img src="gyazo9.jpg" width="100%" height="400px">                           
 
 # レスポンシブ
-<img src ="Videotogif (8).gif" width="30%" height="450px">
+<img src ="Videotogif (9).gif" width="30%" height="450px">
 
 # 工夫ポイント
 レイアウト
@@ -67,7 +68,7 @@ https://health-lunch.herokuapp.com/
 HTML CSS Ruby RubyonRails Javascript Heroku Git 
 
 # 課題
-商品が１品ずつしか購入できない仕様になっているため、買い物カゴ機能の実装を行い、複数商品購入できるような仕様にして行きたいと考えています。
+メニューが1種類のみなので選択できるメニューを増やす予定です。
 
 # ER図
 <img src="er.png" width="70%" height="600px">
@@ -117,131 +118,6 @@ association
 <br>belongs_to :protein
 
 
-## soft テーブル
-| Column              | Type   | Options     |
-| --------------------| ------ | ----------- |
-| name                | string | null: false |
-| acount              | string | null: false |
-| price               | string | null: false |
-| energy              | string | null: false |
-| prote               | string | null: false |
-| salt                | string | null: false |
-| Lipid               | string | null: false |
-| carbo               | string | null: false |
-
-association 
-<br>has_many :users
-<br>belongs_to :soft
-<br>has_many :cart-item
-
-
-## calo テーブル
-
-| Column             | Type   | Options     |
-|--------------------| ------ | ----------- |
-| name               | string | null: false |
-| acount             | string | null: false |
-| price              | string | null: false |
-| energy             | string | null: false |
-| prote              | string | null: false |
-| salt               | string | null: false |
-| Lipid              | string | null: false |
-| carbo              | string | null: false |
-
-association 
-<br>has_many :users
-<br>belongs_to :calo
-
-
-## buyer テーブル
-
-| Column            | Type       | Options                       |
-|-------------------|------------|-------------------------------|
-| user_id           | integer    | null: false, foreign_key: true|
-| protein_id        | integer    | null: false, foreign_key: true|
-
-association
-<br>belongs_to :protein
-<br>belongs_to :user
-<br>has_one :delivery
-
-## bento テーブル
-
-| Column         | Type    | Options                       |
-|----------------|---------|-------------------------------|
-| user_id        | integer | null: false, foreign_key: true|
-| calo_id        | integer | null: false, foreign_key: true|
-| user_id        | integer | null: false, foreign_key: true|
-| calo_id        | integer | null: false, foreign_key: true|
-
-
-association
-<br>belongs_to :calo
-<br>belongs_to :user
-<br>has_one: :deli
-
-
-## shohin テーブル
-
-| Column         | Type    | Options                       |
-|----------------|---------|-------------------------------|
-| user_id        | integer | null: false, foreign_key: true|
-| soft_id        | integer | null: false, foreign_key: true|
-| user_id        | integer | null: false, foreign_key: true|
-| soft_id        | integer | null: false, foreign_key: true|
-
-
-association
-<br>belongs_to :soft
-<br>belongs_to :user
-<br>has_one :add
-
-## delivery テーブル
-
-| Column        | Type       | Options                        |
-|---------------|------------|--------------------------------|
-| buyer_id      | integer    | null: false, foreign_key: true |
-| zip           | string     | null: false                    |
-| region_id     | integer    | null: false                    |
-| city          | string     | null: false                    |
-| reference     | string     | null: false                    |
-| building      | string     |                                |
-| phone_number  | string     | null: false                    |
-
-association
-<br>has_one :buyer
-
-## deli テーブル
-
-| Column        | Type       | Options                        |
-|---------------|------------|--------------------------------|
-| calo_id       | integer    | null: false, foreign_key: true |
-| zip           | string     | null: false                    |
-| region_id     | integer    | null: false                    |
-| city          | string     | null: false                    |
-| reference     | string     | null: false                    |
-| building      | string     |                                |
-| phone_number  | string     | null: false                    |
-
-association
-<br>has_one :bento
-
-
-## add テーブル
-
-| Column        | Type       | Options                        |
-|---------------|------------|--------------------------------|
-| soft_id       | integer    | null: false, foreign_key: true |
-| zip           | string     | null: false                    |
-| region_id     | integer    | null: false                    |
-| city          | string     | null: false                    |
-| reference     | string     | null: false                    |
-| building      | string     |                                |
-| phone_number  | string     | null: false                    |
-
-association
-<br>has_one :shohin
-
 ## review テーブル
 
 | Column     | Type        | Options                        |
@@ -272,6 +148,16 @@ association
 
 association
 <br>belongs_to :protein
+<br>belongs_to :cart
+
+## order テーブル
+| Column        | Type        | Options                        |
+|---------------|-------------|--------------------------------|
+| cart_id       |integer      | null: false, foreign_key: true |
+| total_parice  |integer      | null: false foreign_key: true  |
+
+association
+<br>has_one :purchase
 <br>belongs_to :cart
 
 
